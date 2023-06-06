@@ -5,7 +5,7 @@ export default function TopNav() {
   return (
     <>
         <div className="topnav md:px-24 px-6 py-2 bg-cyan-700 md:text-sm text-xs">
-            <div className="md:flex items-center justify-between md:space-y-0 space-y-1 md:text-left text-center">
+            <div className="md:flex items-center justify-between md:space-y-0 space-y-1">
                 <div className="flex items-center">
                     <MdLocationPin className="topnav-icons" />
                     <p className="topnav-content">Segero, Off Bumala Road, Funyula </p> 

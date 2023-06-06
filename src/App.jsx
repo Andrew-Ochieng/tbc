@@ -9,6 +9,7 @@ import Events from './pages/Events'
 import Home from './pages/Home'
 import Ministries from './pages/Ministries'
 import TopNav from './components/TopNav'
+import Services from './pages/Services'
 
 function App() {
  
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path='/' element={ <Home /> } />
           <Route path='/about' element={ <About /> } />
+          <Route path='/services' element={ <Services /> } />
           <Route path='/ministries' element={ <Ministries />} />
           <Route path='/blog' element={ <Blog /> } />
           <Route path='/events' element={ <Events /> } />
