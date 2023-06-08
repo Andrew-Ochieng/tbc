@@ -2,12 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
 
 body {
-    font-family: 'Maven Pro', sans-serif;
+    /* font-family: 'Maven Pro', sans-serif; */
+    font-family: 'Barlow', sans-serif;
 }
 
 @layer components {
@@ -21,5 +23,13 @@ body {
 
     .topnav-content {
         @apply text-yellow-100 
+    }
+
+    .btn-link {
+        @apply md:mt-8 mt-2 no-underline hover:no-underline capitalize px-4 py-3 rounded-md border border-cyan-600 hover:border-none hover:bg-cyan-600 bg-gray-100 text-cyan-800 hover:text-white  
+    }
+
+    .section-title {
+        @apply font-medium uppercase md:text-2xl text-lg md:mb-16 mb-8
     }
 }
