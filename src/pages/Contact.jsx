@@ -1,6 +1,9 @@
+import ContactMap from "../components/Contact/ContactMap";
 
 export default function Contact() {
   return (
-    <div>Contact</div>
+    <div>
+      <ContactMap />
+    </div>
   )
 }

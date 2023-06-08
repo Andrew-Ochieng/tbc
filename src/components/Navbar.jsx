@@ -28,7 +28,7 @@ export default function Navbar() {
                   </button>
               </div>
 
-              <div className='md:flex hidden text-yellow-500'>
+              <div className='md:flex hidden text-cyan-700'>
                   <ul className="md:flex items-center font-medium lg:space-x-6 md:space-x-4">
                       {navLinks.map((nav) => (
                           <li key={nav.id} className="navlink md:my-0 my-2 md:text-lg">
@@ -48,7 +48,7 @@ export default function Navbar() {
                       <FaRegTimesCircle />
                   </button> 
               </div>
-              <ul className="flex flex-col items-center text-base font-medium space-y-8 text-yellow-500">
+              <ul className="flex flex-col items-center text-base font-medium space-y-8 text-cyan-700">
                   {navLinks.map((nav) => (
                       <li key={nav.id} onClick={() => setOpen((prev) => !prev)} className="navlink md:mx-4 mx-2 md:my-0 my-2">
                           <Link to={nav.route}>
