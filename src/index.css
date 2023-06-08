@@ -33,4 +33,16 @@
     .section-title {
         @apply font-medium uppercase md:text-2xl text-lg md:mb-16 mb-8
     }
+
+    .btn {
+        @apply px-4 py-1 bg-gradient-to-r from-cyan-500 to-cyan-700 border-none text-white duration-500 rounded-lg 
+      }
+
+    .input {
+        @apply py-3 px-2 bg-white rounded-lg w-full focus-within:border-cyan-400 outline-none
+      }
+    
+      .label {
+        @apply my-2
+      }
 }
