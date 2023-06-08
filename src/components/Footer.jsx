@@ -9,7 +9,7 @@ export default function Footer() {
     <>
       <div className="">
         <div>
-          <footer className="md:px-24 px-6 bg-base-300 footer p-10 text-base-content">
+          <footer className="md:px-24 px-4 bg-base-300 footer p-10 text-base-content">
             <div>
               <div className="md:w-48 w-32">
                 <img src="tbc-nrb.svg" alt="" />
@@ -24,11 +24,11 @@ export default function Footer() {
             <div>
               <span className="footer-title">Menu</span> 
               <Link to='/about' className="link link-hover">About Us</Link> 
-              <Link to='/Services' className="link link-hover">Services</Link> 
-              <Link to='/' className="link link-hover">Ministries</Link> 
-              <Link to='/' className="link link-hover">Blog</Link>
-              <Link to='/' className="link link-hover">Events</Link>
-              <Link to='/' className="link link-hover">Contact</Link>
+              <Link to='/services' className="link link-hover">Services</Link> 
+              <Link to='/ministries' className="link link-hover">Ministries</Link> 
+              <Link to='/bog' className="link link-hover">Blog</Link>
+              <Link to='/events' className="link link-hover">Events</Link>
+              <Link to='/contact' className="link link-hover">Contact</Link>
             </div> 
             <div>
               <span className="footer-title">Social</span> 
@@ -39,7 +39,7 @@ export default function Footer() {
               </div>
             </div>
           </footer>
-          <div className="md:px-24 px-6 md:py-4 py-2 flex justify-center text-center bg-cyan-700 md:text-sm text-xs text-gray-100">
+          <div className="md:px-24 px-4 md:py-4 py-2 flex justify-center text-center bg-cyan-700 md:text-sm text-[10px] text-gray-100">
             <p>
               Copyright © 
               <span className="pl-1 ">{year}</span> | 

@@ -15,7 +15,7 @@ export default function Navbar() {
     ]
   return (
     <>
-      <nav className="md:px-24 px-6 md:py-5 py-3 top-0 left-0 static z-[100] bg-white shadow-xl"> 
+      <nav className="md:px-24 px-4 md:py-5 py-4 top-0 left-0 static z-[100] bg-white shadow-xl"> 
           <div className="md:flex justify-between items-center">
               <div className="flex justify-between items-center">
                   <Link to='/' className="flex items-center justify-center    ">

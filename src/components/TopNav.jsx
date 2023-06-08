@@ -4,7 +4,7 @@ import { TbMail } from "react-icons/tb"
 export default function TopNav() {
   return (
     <>
-        <div className="topnav md:px-24 px-6 py-2 bg-cyan-700 md:text-sm text-xs">
+        <div className="topnav md:px-24 px-2 py-2 bg-cyan-700 md:text-sm text-xs">
             <div className="md:flex items-center justify-between md:space-y-0 space-y-1">
                 <div className="flex items-center">
                     <MdLocationPin className="topnav-icons" />
