@@ -26,7 +26,7 @@ export default function Footer() {
               <Link to='/about' className="link link-hover">About Us</Link> 
               <Link to='/services' className="link link-hover">Services</Link> 
               <Link to='/ministries' className="link link-hover">Ministries</Link> 
-              <Link to='/bog' className="link link-hover">Blog</Link>
+              <Link to='/blog' className="link link-hover">Blog</Link>
               <Link to='/events' className="link link-hover">Events</Link>
               <Link to='/contact' className="link link-hover">Contact</Link>
             </div> 

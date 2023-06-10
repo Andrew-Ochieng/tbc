@@ -1,0 +1,25 @@
+import { intros } from "../../data/about"
+
+export default function Intro() {
+  return (
+    <>
+        <div className="md:m-24 m-4 ">
+            <div className="md:mb-16 mb-8">
+                <h2 className="text-center section-title md:text-4xl text-2xl text-cyan-700">About</h2>
+            </div>
+            <div className="md:p-8 p-4 border rounded-2xl ">
+                {intros.map((item) => (
+                    <div className="grid md:grid-cols-2 grid-cols-1 md:gap-16 gap-8">
+                        <div className="">
+                            <p className="font-light text-gray-700 md:text-base text-sm tracking-wide md:leading-loose leading-normal">{item.content}</p>
+                        </div>
+                        <div className="w-full ">
+                            <img src={item.image} alt="" className="md:h-[60%] md:rounded-2xl rounded-xl"/>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div> 
+    </>
+  )
+}
