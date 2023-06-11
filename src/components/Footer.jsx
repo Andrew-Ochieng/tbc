@@ -15,7 +15,7 @@ export default function Footer() {
                 <img src="tbc-nrb.svg" alt="" />
               </div>
               <div className="space-y-1 md:mt-4 mt-2 md:">
-                <p>P.O. Box 2865 - 40100</p>
+                <p>P.O. Box 14 - 50406</p>
                 <p>Funyula, Busia - Kenya</p>
                 <p>tbcofficefunyula@gmail.com</p>
                 <p>+254 728 406 267</p>

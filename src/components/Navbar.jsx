@@ -15,7 +15,7 @@ export default function Navbar() {
     ]
   return (
     <>
-      <nav className="md:px-24 px-4 md:py-5 py-4 top-0 left-0 static z-[100] bg-white shadow-xl"> 
+      <nav className="md:px-24 px-4 md:py-5 py-5 top-0 left-0 static z-[100] bg-white shadow-xl"> 
           <div className="md:flex justify-between items-center">
               <div className="flex justify-between items-center">
                   <Link to='/' className="flex items-center justify-center    ">
@@ -42,13 +42,13 @@ export default function Navbar() {
           </div>
 
           {/* mobile-version */}
-          <div className={`${open ? "left-0 " : "left-[-100%]"} z-[100] sm:hidden absolute top-0 right-0 bottom-0  space-y-8 py-6 px-8 w-full h-screen duration-300 ease-in-out bg-cyan-700 opacity-95`}>
+          <div className={`${open ? "left-0 " : "left-[-100%]"} z-[100] sm:hidden absolute top-0 right-0 bottom-0  space-y-8 py-6 px-8 w-full min-h-full duration-300 ease-in-out bg-cyan-700 opacity-95`}>
               <div className="flex justify-end">
                   <button onClick={() => setOpen((prev) => !prev)} className="sm:hidden text-2xl text-gray-200 text-right">
                       <FaRegTimesCircle />
                   </button> 
               </div>
-              <ul className="flex flex-col items-center text-base font-medium space-y-8 text-cyan-700">
+              <ul className="flex flex-col items-center text-base font-medium space-y-8 text-gray-200">
                   {navLinks.map((nav) => (
                       <li key={nav.id} onClick={() => setOpen((prev) => !prev)} className="navlink md:mx-4 mx-2 md:my-0 my-2">
                           <Link to={nav.route}>

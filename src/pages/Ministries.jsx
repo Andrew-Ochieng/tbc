@@ -1,6 +1,9 @@
+import ServiceCards from "../components/Services/ServiceCards";
 
 export default function Ministries() {
   return (
-    <div>Ministries</div>
+    <div>
+      <ServiceCards />
+    </div>
   )
 }

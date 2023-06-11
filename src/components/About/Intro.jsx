@@ -1,4 +1,4 @@
-import { intros } from "../../data/about"
+import { intros } from "../../data/content"
 
 export default function Intro() {
   return (
@@ -8,8 +8,8 @@ export default function Intro() {
                 <h2 className="text-center section-title md:text-4xl text-2xl text-cyan-700">About</h2>
             </div>
             <div className="md:p-8 p-4 border rounded-2xl ">
-                {intros.map((item) => (
-                    <div className="grid md:grid-cols-2 grid-cols-1 md:gap-16 gap-8">
+                {intros.map((item, index) => (
+                    <div key={index} className="grid md:grid-cols-2 grid-cols-1 md:gap-16 gap-8">
                         <div className="">
                             <p className="font-light text-gray-700 md:text-base text-sm tracking-wide md:leading-loose leading-normal">{item.content}</p>
                         </div>
