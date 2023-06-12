@@ -40,9 +40,29 @@
 
     .input {
         @apply py-3 px-2 bg-white rounded-lg w-full focus-within:border-cyan-400 outline-none
-      }
+    }
     
-      .label {
+    .label {
         @apply my-2
-      }
+    }
+
+    .card {
+        @apply rounded-xl shadow-md
+    }
+
+    .card-content {
+        @apply md:p-4 p-3 
+    }
+
+    .card-title {
+        @apply font-semibold text-gray-700 hover:text-cyan-700
+    }
+
+    .card-description {
+        @apply text-gray-500 font-medium
+    }
+
+    .card-image {
+        @apply rounded-t-xl
+    }
 }

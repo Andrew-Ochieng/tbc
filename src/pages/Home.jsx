@@ -1,12 +1,12 @@
 import AboutUs from "../components/Home/AboutUs";
 import Hero from "../components/Home/Hero";
-import ServiceCards from "../components/Home/ServiceCards";
+import HomeCards from "../components/Home/HomeCards";
 
 export default function Home() {
   return (
     <div>
       <Hero />
-      <ServiceCards />
+      <HomeCards />
       <AboutUs />
     </div>
   )

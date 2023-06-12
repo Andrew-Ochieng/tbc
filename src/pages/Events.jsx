@@ -1,6 +1,9 @@
+import EventCards from "../components/Events/EventCards";
 
 export default function Events() {
   return (
-    <div>Events</div>
+    <div>
+      <EventCards />
+    </div>
   )
 }

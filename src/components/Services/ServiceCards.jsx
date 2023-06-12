@@ -1,25 +1,26 @@
-import { ministries } from "../../data/content"
-export default function ServiceCards() {
+import { services } from "../../data/content"
+export default function HomeCards() {
   return (
     <>
-        <div className="md:m-24 m-4 ">
-            <div className="md:mb-16 mb-8">
-                <h2 className="text-center section-title md:text-4xl text-2xl text-cyan-700">Ministries</h2>
+        <div className="md:m-24 mx-4 my-16 grid md:grid-cols-2 md:gap-24 gap-16">
+            <div> 
+                <h2 className="section-title md:mb-6 mb-2">Gatherings</h2>
+                <p>
+                    The Bible gives two specific reasons for committing to be part of a close-knit family of believers—that we would be encouraged, and that we would encourage others (Hebrews 10:24-25). God designed the church to be the place where we would receive and give the accountability needed to persevere in our faith amid a darkening culture. With this goal in mind, the Bible calls believers to love, encourage, and stimulate one another to good works until Christ returns. This mandate is what drives our fellowships, meetings, Sunday School & Bible Studies and services at Grace Baptist Church - Kisumu. Join us to be edified with biblical teaching and preaching.
+                </p>
             </div>
-            <div className="md:p-8 p-4 border rounded-2xl grid md:grid-cols-2 md:gap-16 gap-8">
-                {ministries.map((item, index) => (
-                    <div key={index} className="">
-                        <div className="w-full md:mb-0 mb-4">
-                            <img src={item.image} alt="" className="md:h-[60%] md:rounded-2xl rounded-xl"/>
-                        </div>
-                        <div className="">
-                            <h3 className="text-cyan-800 md:text-3xl text-xl md:my-4 my-2">{item.name}</h3>
-                            <p className="font-light text-gray-700 md:text-base text-sm tracking-wide md:leading-loose leading-normal">{item.content}</p>
-                        </div>
+
+            <div className="md:space-y-16 space-y-8">
+                {services.map((item, index) => (
+                    <div key={index} className="md:space-y-4">
+                        <h3 className="md:text-xl text-lg font-semibold text-cyan-700">
+                            <span className="mr-2">{item.id}</span>
+                            {item.name}</h3>
+                        <p>{item.content}</p>
                     </div>
                 ))}
             </div>
-        </div> 
+        </div>
     </>
   )
 }

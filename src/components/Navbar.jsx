@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FaRegTimesCircle } from "react-icons/fa"
 import { HiMenuAlt3 } from "react-icons/hi"
+import logo from "../assets/tbc-nrb.svg"
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
@@ -20,7 +22,7 @@ export default function Navbar() {
               <div className="flex justify-between items-center">
                   <Link to='/' className="flex items-center justify-center    ">
                       <div className="md:w-48 w-32">
-                        <img src="tbc-nrb.svg" alt="" />
+                        <img src={logo} alt="" />
                       </div>
                   </Link>
                   <button onClick={() => setOpen((prev) => !prev)} className=' sm:hidden text-2xl text-gray-900'>
