@@ -26,6 +26,8 @@ function App() {
           <Route path='/blog' element={ <Blog /> } />
           <Route path='/events' element={ <Events /> } />
           <Route path='/contact' element={ <Contact /> } />
+
+          <Route path='/blogs/:id' />
         </Routes>
         <Footer />
       </BrowserRouter>

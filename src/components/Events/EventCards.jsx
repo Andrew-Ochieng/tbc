@@ -3,7 +3,7 @@ import data from "../../data/events"
 export default function EventCards() {
   return (
     <>
-        <div className="md:m-24 m-4 md:gap-16 gap-8 grid md:grid-cols-3">
+        <div className="list-container">
             {data.events.map((item, index) => (
                 <div key={index} className="card">
                     <a href={item.link} target="_blank" key={item.index}>

@@ -46,6 +46,10 @@
         @apply my-2
     }
 
+    .list-container {
+        @apply md:m-24 m-4 md:gap-16 gap-8 grid md:grid-cols-3
+    }
+
     .card {
         @apply rounded-xl shadow-md
     }

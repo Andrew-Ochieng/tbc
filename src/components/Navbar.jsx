@@ -22,7 +22,7 @@ export default function Navbar() {
               <div className="flex justify-between items-center">
                   <Link to='/' className="flex items-center justify-center    ">
                       <div className="md:w-48 w-32">
-                        <img src={logo} alt="" />
+                        <img src={logo} alt="Church logo" />
                       </div>
                   </Link>
                   <button onClick={() => setOpen((prev) => !prev)} className=' sm:hidden text-2xl text-gray-900'>
