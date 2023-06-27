@@ -8,7 +8,7 @@ const ContactDetails = () => {
         {icon: <FaUserAlt />, details: 'Trinity Baptist Church'},
         {icon: <FaPhone />, details: '+254 728 406 267'},
         {icon: <MdLocationOn />, details: 'Funyula, Busia - Kenya'},
-        {icon: <HiOutlineMail />, details: 'info@tbcfunyula.co.ke'},
+        {icon: <HiOutlineMail />, details: 'info@trinitybaptistfunyula.co.ke'},
     ]
     return ( 
         <>
