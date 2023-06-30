@@ -13,6 +13,21 @@ const blogs = [
         id: 3,
         title: " Is there such a thing as tongue-speaking today?",
         content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+    },
+    {
+        id: 4,
+        title: " Is there such a thing as tongue-speaking today?",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+    },
+    {
+        id: 5,
+        title: " Is there such a thing as tongue-speaking today?",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+    },
+    {
+        id: 6,
+        title: " Is there such a thing as tongue-speaking today?",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
     }
 ]
 

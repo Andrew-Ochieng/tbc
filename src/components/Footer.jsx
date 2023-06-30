@@ -17,7 +17,7 @@ export default function Footer() {
               <div className="space-y-1 md:mt-4 mt-2 md:">
                 <p>P.O. Box 14 - 50406</p>
                 <p>Funyula, Busia - Kenya</p>
-                <p>tbcofficefunyula@gmail.com</p>
+                <p>info@trinitybaptistfunyula.co.ke</p>
                 <p>+254 728 406 267</p>
               </div>
             </div> 
@@ -39,7 +39,7 @@ export default function Footer() {
               </div>
             </div>
           </footer>
-          <div className="md:px-24 px-4 md:py-4 py-2 flex justify-center text-center bg-cyan-700 md:text-sm text-[10px] text-gray-100">
+          <div className="md:px-24 px-4 md:py-4 py-3 flex justify-center text-center bg-cyan-700 md:text-sm text-[11px] text-gray-100">
             <p>
               Copyright © 
               <span className="pl-1 ">{year}</span> | 
