@@ -12,6 +12,7 @@ import TopNav from './components/TopNav'
 import Services from './pages/Services'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
+import BlogDetails from './components/Blog/BlogDetails'
 
 function App() {
   const [posts, setPosts] = useState([])
@@ -38,15 +39,14 @@ function App() {
         <TopNav />
         <Navbar /> 
         <Routes>
-          <Route path='/' element={ <Home /> } />
+          <Route path='/' element={ <Home posts={posts} /> } />
           <Route path='/about' element={ <About /> } />
           <Route path='/services' element={ <Services /> } />
           <Route path='/ministries' element={ <Ministries />} />
           <Route path='/blog' element={ <Blog posts={posts} /> } />
           <Route path='/events' element={ <Events /> } />
           <Route path='/contact' element={ <Contact /> } />
-
-          <Route path='/blogs/:id' />
+          <Route path='/blogs/:id' element={ <BlogDetails posts={posts} /> } />
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -34,6 +34,14 @@
         @apply font-medium uppercase text-gray-700 md:text-2xl text-lg md:mb-16 mb-8
     }
 
+    .sub-title {
+        @apply font-bold text-gray-700 md:text-3xl text-xl
+    }
+
+    .content-title {
+        @apply md:text-2xl text-xl md:mb-6 mb-4 font-semibold capitalize
+    }
+
     .btn {
         @apply hover:translate-y-1 hover:scale-105 px-4 py-1 bg-gradient-to-r from-cyan-500 to-cyan-700 border-none text-white duration-500 rounded-lg 
       }

@@ -1,24 +1,23 @@
+import { Slide } from "react-reveal";
 import { Link } from "react-router-dom";
-import { Fade } from "react-reveal";
 
-const BlogList = ({posts}) => {
-
+const BlogCards = ({posts}) => {
     return ( 
         <>
-            <div className="list-container">
-                {posts.map((blog, index) => (
-                    <Fade bottom>
+            <div className="grid md:grid-cols-3 md:gap-16 gap-8">
+                {posts.slice(0,3).map((blog, index) => (
+                    <Slide bottom>
                         <Link to={`/blogs/${blog.id}`} key={index} className="card">
                             <div className="card-content">
                                 <h4 className="card-title">{blog.title}</h4>
                                 <p className="card-description">{blog.body.slice(0, 100)}</p>
                             </div>
                         </Link>
-                    </Fade>
+                    </Slide>
                 ))}
             </div>
         </>
      );
 }
  
-export default BlogList;
+export default BlogCards;
