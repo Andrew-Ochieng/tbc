@@ -23,7 +23,7 @@ const Gallery = () => {
 
     return ( 
         <>
-            <div className="md:mx-24 mx-4 md:my-24 my-16">
+            <div className="md:px-24 px-4 md:py-24 py-16">
                 <div className="section-title text-center">
                     <h3>Our Gallery</h3>
                 </div>

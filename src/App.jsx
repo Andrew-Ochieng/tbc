@@ -10,8 +10,27 @@ import Home from './pages/Home'
 import Ministries from './pages/Ministries'
 import TopNav from './components/TopNav'
 import Services from './pages/Services'
+import axios from 'axios'
+import { useState, useEffect } from 'react'
 
 function App() {
+  const [posts, setPosts] = useState([])
+
+  async function getBlogs () {
+    try {
+      const res = await axios.get('https://jsonplaceholder.typicode.com/posts')
+      const items = res.data
+      // console.log(items)
+      setPosts(items)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  useEffect(() => {
+    getBlogs()
+  }, [])
+
  
   return (
     <>
@@ -23,7 +42,7 @@ function App() {
           <Route path='/about' element={ <About /> } />
           <Route path='/services' element={ <Services /> } />
           <Route path='/ministries' element={ <Ministries />} />
-          <Route path='/blog' element={ <Blog /> } />
+          <Route path='/blog' element={ <Blog posts={posts} /> } />
           <Route path='/events' element={ <Events /> } />
           <Route path='/contact' element={ <Contact /> } />
 

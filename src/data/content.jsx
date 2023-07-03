@@ -9,35 +9,21 @@ const intros = [
     }
 ]
 
-const pastors = [
+const leaders = [
     {
         name: "Simon Ochieng",
         image: pasi,
         post: "Pastor",
         content: "Pastor Simon Ochieng pursued Theological at Ahero Bible College and later studied for the ministry at Trinity Pastors College of Trinity Baptist Church Nairobi. Since 2009 he has been pastoring Trinity Baptist Church in Funyula, Busia - Kenya. He is married to Mary Ochieng and the Lord has graciously blessed them with two boys and two girls. "
+    },
+    {
+        name: "Benedict Barasa",
+        image: pasi,
+        post: "Deacon",
+        content: "Deacon Benedict Barasa has served in the ministry before joining TBC - Funyula. Since 2017 he has been serving as the deacon for Trinity Baptist Church in Funyula, Busia - Kenya. He is married to Margret Barasa and the Lord has graciously blessed them with three boys and one granddaughter. "
     }
 ]
 
-const deacons = [
-    {
-        name: "Benedict Barasa",
-        image: pasi,
-        post: "Deacon",
-        content: "Deacon Benedict Barasa has served in the ministry before joining TBC - Funyula. Since 2017 he has been serving as the deacon for Trinity Baptist Church in Funyula, Busia - Kenya. He is married to Margret Barasa and the Lord has graciously blessed them with three boys and one granddaughter. "
-    },
-    {
-        name: "Benedict Barasa",
-        image: pasi,
-        post: "Deacon",
-        content: "Deacon Benedict Barasa has served in the ministry before joining TBC - Funyula. Since 2017 he has been serving as the deacon for Trinity Baptist Church in Funyula, Busia - Kenya. He is married to Margret Barasa and the Lord has graciously blessed them with three boys and one granddaughter. "
-    },
-    {
-        name: "Benedict Barasa",
-        image: pasi,
-        post: "Deacon",
-        content: "Deacon Benedict Barasa has served in the ministry before joining TBC - Funyula. Since 2017 he has been serving as the deacon for Trinity Baptist Church in Funyula, Busia - Kenya. He is married to Margret Barasa and the Lord has graciously blessed them with three boys and one granddaughter. "
-    }
-]
 
 const ministries = [
     {
@@ -96,4 +82,4 @@ const services = [
     }
 ]
  
-export { pastors, deacons, intros, ministries, services};
+export { leaders, intros, ministries, services};

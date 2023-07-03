@@ -1,9 +1,9 @@
 import BlogList from "../components/Blog/BlogList";
 
-export default function Blog() {
+export default function Blog({posts}) {
   return (
     <div>
-      <BlogList />
+      <BlogList posts={posts} />
     </div>
   )
 }
