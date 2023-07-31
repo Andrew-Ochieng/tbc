@@ -1,7 +1,20 @@
-const AddBlogs = () => {
+import { useState } from "react"
+import { addDoc, collection } from "firebase/firestore"
+import { db } from "../../firebase/firebaseConfig"
 
-    const handleAddBlog = (e) => {
+const AddBlogs = () => {
+    const [title, setTitle] = useState('')
+    const [body, setBody] = useState('')
+    const postsCollectionRef = collection(db, "blogs")
+    
+    const handleAddBlog = async (e) => {
         e.preventDefault()
+
+        await addDoc(postsCollectionRef, {
+            title,
+            body
+        })
+
         console.log('Blog succesfully added!')
     }
     
@@ -16,7 +29,9 @@ const AddBlogs = () => {
                                 className="input border border-cyan-500" 
                                 type="text" 
                                 name="name" 
-                                placeholder="Enter name..." 
+                                value={title}
+                                onChange={(e) => setTitle(e.target.value)}
+                                placeholder="Write title..." 
                                 // required 
                             />
                         </div>
@@ -24,7 +39,9 @@ const AddBlogs = () => {
                             <textarea 
                                 className="border border-cyan-500 py-2 px-3 rounded-lg w-full outline-none" 
                                 name="message" 
-                                placeholder="Enter Message..." 
+                                value={body}
+                                onChange={(e) => setBody(e.target.value)}
+                                placeholder="Write Content..." 
                                 cols="30" 
                                 rows="4"
                             >
