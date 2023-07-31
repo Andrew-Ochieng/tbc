@@ -10,26 +10,30 @@ import Home from './pages/Home'
 import Ministries from './pages/Ministries'
 import TopNav from './components/TopNav'
 import Services from './pages/Services'
-import axios from 'axios'
 import { useState, useEffect } from 'react'
 import BlogDetails from './components/Blog/BlogDetails'
-
+import { db } from "./firebase/firebaseConfig"
+import { getDocs, collection } from 'firebase/firestore'
+import AddBlogs from './pages/admin/AddBlogs'
 function App() {
   const [posts, setPosts] = useState([])
-
-  async function getBlogs () {
-    try {
-      const res = await axios.get('https://jsonplaceholder.typicode.com/posts')
-      const items = res.data
-      // console.log(items)
-      setPosts(items)
-    } catch (error) {
-      console.log(error)
-    }
-  }
+  const [isLoading, setIsLoading] = useState(true)
+  const postsCollectionRef = collection(db, "blogs")
 
   useEffect(() => {
-    getBlogs()
+    const getPosts = async () => {
+      try {
+        const data = await getDocs(postsCollectionRef)
+        setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+        setIsLoading(false)
+        // console.log(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+      } catch (err) {
+        console.log(err)
+        setIsLoading(false)
+      }
+    }
+
+    getPosts()
   }, [])
 
  
@@ -43,10 +47,12 @@ function App() {
           <Route path='/about' element={ <About /> } />
           <Route path='/services' element={ <Services /> } />
           <Route path='/ministries' element={ <Ministries />} />
-          <Route path='/blog' element={ <Blog posts={posts} /> } />
+          <Route path='/blog' element={ <Blog posts={posts} isLoading={isLoading} /> } />
           <Route path='/events' element={ <Events /> } />
           <Route path='/contact' element={ <Contact /> } />
           <Route path='/blogs/:id' element={ <BlogDetails posts={posts} /> } />
+
+          <Route path='/add-blogs' element={ <AddBlogs /> } />
         </Routes>
         <Footer />
       </BrowserRouter>
