@@ -15,6 +15,7 @@ import BlogDetails from './components/Blog/BlogDetails'
 import { db } from "./firebase/firebaseConfig"
 import { getDocs, collection } from 'firebase/firestore'
 import AddBlogs from './pages/admin/AddBlogs'
+import Login from './pages/admin/Login'
 function App() {
   const [posts, setPosts] = useState([])
   const [isLoading, setIsLoading] = useState(true)
@@ -47,12 +48,13 @@ function App() {
           <Route path='/about' element={ <About /> } />
           <Route path='/services' element={ <Services /> } />
           <Route path='/ministries' element={ <Ministries />} />
-          <Route path='/blog' element={ <Blog posts={posts} isLoading={isLoading} /> } />
+          <Route path='/blogs' element={ <Blog posts={posts} isLoading={isLoading} /> } />
           <Route path='/events' element={ <Events /> } />
           <Route path='/contact' element={ <Contact /> } />
           <Route path='/blogs/:id' element={ <BlogDetails posts={posts} /> } />
 
           <Route path='/admin' element={ <AddBlogs /> } />
+          <Route path='/login' element={ <Login /> } />
         </Routes>
         <Footer />
       </BrowserRouter>
