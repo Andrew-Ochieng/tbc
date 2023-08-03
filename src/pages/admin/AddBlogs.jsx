@@ -15,15 +15,20 @@ const AddBlogs = () => {
     const handleAddBlog = async (e) => {
         e.preventDefault()
 
-        await addDoc(postsCollectionRef, {
-            title,
-            author,
-            body
-        })
-
-        toast.success('New blog created succesfully')
-        navigate('/blogs')
-        console.log('Blog succesfully added!')
+        if (title !== "" && author !=="" && body !== "") {
+            await addDoc(postsCollectionRef, {
+                title,
+                author,
+                body
+            })
+    
+            toast.success('New blog created succesfully')
+            setTimeout(() => {
+                navigate('/blogs')
+            }, 3000);
+        } else {
+            toast.error('Fill in the form & try again')
+        }
     }
     
     return ( 

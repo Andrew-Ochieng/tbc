@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const BlogDetails = ({posts}) => {
     const { id } = useParams()
@@ -19,6 +19,9 @@ const BlogDetails = ({posts}) => {
                     <div >
                         <h2 className="content-title">{post.title}</h2>
                         <p className="normal-case font-light md:text-base text-sm">{post.body}</p>
+                        <Link to='/blogs' className="font-base pt-4 underline text-cyan-600">
+                            {post ? "Nothing to display here.." : 'Back'}
+                        </Link>
                     </div>
                 )}
             </div>

@@ -1,23 +1,49 @@
 import { useState } from "react";
+import { auth } from "../../firebase/firebaseConfig";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
 
 const Login = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const navigate = useNavigate()
 
     const handleLogin = (e) => {
         e.preventDefault()
 
-        // if (email !== "" && password !== "")
-        //     console.log('User logged in succesfully!')
-        // } else {
-        //     console.log('User logged in succesfully!')
-        // }
-        console.log('User logged in succesfully!')
+        if (email !== "" && password !== "") {
+            signInWithEmailAndPassword(auth, email, password)
+            .then((res) => {
+                localStorage.setItem('Auth Token', res._tokenResponse.refreshToken)
+                toast.success('You logged in succesfully')
+                setTimeout(() => {
+                    navigate('/addblogs')
+                }, 3000);
+            })
+            // toast.success('You logged in succesfully')
+            // setTimeout(() => {
+            //     navigate('/addblogs')
+            // }, 3000);
+        } else {
+            toast.error('Please enter email && password to login!')
+        }
+        // console.log('User logged in succesfully!')
     }
 
     return ( 
         <>
             <div className="flex flex-col items-center md:my-32 my-16">
+                <ToastContainer 
+                    position = 'top-center'
+                    autoClose = {2000}
+                    hideProgressBar = {true}
+                    closeOnClick = {true}
+                    pauseOnHover = {true}
+                    draggable = {true}
+                    progress = {undefined}
+                    theme= 'colored'
+                />
                 <form>
                     <div className="label">
                         <input 

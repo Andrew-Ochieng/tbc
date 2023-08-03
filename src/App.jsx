@@ -53,8 +53,8 @@ function App() {
           <Route path='/contact' element={ <Contact /> } />
           <Route path='/blogs/:id' element={ <BlogDetails posts={posts} /> } />
 
-          <Route path='/admin' element={ <AddBlogs /> } />
-          <Route path='/login' element={ <Login /> } />
+          <Route path='/admin' element={ <Login /> } />
+          <Route path='/addblogs' element={ <AddBlogs /> } />
         </Routes>
         <Footer />
       </BrowserRouter>
