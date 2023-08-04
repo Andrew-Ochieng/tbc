@@ -19,6 +19,7 @@ import Login from './pages/admin/Login'
 function App() {
   const [posts, setPosts] = useState([])
   const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState(false)
   const postsCollectionRef = collection(db, "blogs")
 
   useEffect(() => {
@@ -27,10 +28,11 @@ function App() {
         const data = await getDocs(postsCollectionRef)
         setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
         setIsLoading(false)
-        // console.log(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+        setError(false)
       } catch (err) {
         console.log(err)
         setIsLoading(false)
+        setError(true)
       }
     }
 
@@ -48,10 +50,10 @@ function App() {
           <Route path='/about' element={ <About /> } />
           <Route path='/services' element={ <Services /> } />
           <Route path='/ministries' element={ <Ministries />} />
-          <Route path='/blogs' element={ <Blog posts={posts} isLoading={isLoading} /> } />
+          <Route path='/blogs' element={ <Blog posts={posts} isLoading={isLoading} error={error} /> } />
           <Route path='/events' element={ <Events /> } />
           <Route path='/contact' element={ <Contact /> } />
-          <Route path='/blogs/:id' element={ <BlogDetails posts={posts} /> } />
+          <Route path='/blogs/:id' element={ <BlogDetails posts={posts} isLoading={isLoading} error={error} /> } />
 
           <Route path='/admin' element={ <Login /> } />
           <Route path='/addblogs' element={ <AddBlogs /> } />

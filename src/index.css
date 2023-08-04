@@ -13,6 +13,15 @@
     /* font-family: 'Barlow', sans-serif; */
 }
 
+.wrapper{
+    border: 1px solid grey;
+  }
+  
+  .editor{
+    background-color: lavender;
+  }
+  
+
 @layer components {
     .topnav {
         /* font-family: 'Quicksand', sans-serif; */
