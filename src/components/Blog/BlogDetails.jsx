@@ -20,10 +20,19 @@ const BlogDetails = ({posts, isLoading, error}) => {
                     <p className="text-cyan-600 font-light md:text-5xl text-lg">Loading blog post...</p>
                 </div>
             ) : (
-                <div className="md:mx-24 mx-4 md:my-32 my-16">
+                <div className="md:mx-24 mx-4 md:my-16 my-8">
                     {post && (
                         <div >
-                            <h2 className="content-title">{post.title}</h2>
+                            <div className="mb-4 md:max-w-3xl">
+                                <img src={post.image_link} alt="" />
+                            </div>
+                            <h2 className="content-title">
+                                {post.title} : 
+                                <span className="ml-2 font-light italic md:text-base text-sm text-cyan-600">
+                                    {post.author}
+                                </span>
+                            </h2>
+                            
                             <p className="normal-case font-light md:text-base text-sm">{post.body}</p>
                             <p className="pt-4">
                             <Link to='/blogs' className="font-base underline text-cyan-600">
