@@ -1,8 +1,8 @@
 import AboutUs from "../components/Home/AboutUs";
 import Hero from "../components/Home/Hero";
 import HomeCards from "../components/Home/HomeCards";
-import BlogCards from "../components/Home/BlogCards";
 import { Link } from "react-router-dom";
+import BlogList from "../components/Blog/BlogList";
 
 export default function Home({posts}) {
   return (
@@ -15,7 +15,7 @@ export default function Home({posts}) {
           <h3 className="sub-title">Blog</h3>
           <Link className="sub-title text-cyan-700  hover:underline" to='/blog'>View All</Link>
         </div>
-        <BlogCards posts={posts} />
+        <BlogList posts={posts.slice(0,3)} />
       </div>
     </div>
   )

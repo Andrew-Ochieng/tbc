@@ -11,7 +11,7 @@ const BlogList = ({posts, isLoading, error}) => {
                     <p className="text-cyan-600 font-light md:text-5xl text-lg">Loading blog post...</p>
                 </div>
             ) : (
-                <div className="list-container">
+                <div className="list-container mx-0">
                     {posts.map((blog, index) => (
                         <Fade bottom>
                             <Link to={`/blogs/${blog.id}`} key={index} className="card">

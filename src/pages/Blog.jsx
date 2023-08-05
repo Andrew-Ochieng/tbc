@@ -8,7 +8,7 @@ export default function Blog({posts, isLoading}) {
           <p className="text-cyan-600 font-light md:text-5xl text-lg">Loading blog posts...</p>
         </div>
       ) : (
-        <div className="my-8">
+        <div className="my-8 md:mx-24 mx-4 ">
           <BlogList posts={posts} />
         </div>
       )}
