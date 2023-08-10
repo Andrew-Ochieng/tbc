@@ -18,17 +18,12 @@ const Login = () => {
                 localStorage.setItem('Auth Token', res._tokenResponse.refreshToken)
                 toast.success('You logged in succesfully')
                 setTimeout(() => {
-                    navigate('/addblogs')
-                }, 3000);
+                    navigate('/admin/create')
+                }, 2000);
             })
-            // toast.success('You logged in succesfully')
-            // setTimeout(() => {
-            //     navigate('/addblogs')
-            // }, 3000);
         } else {
             toast.error('Please enter email && password to login!')
         }
-        // console.log('User logged in succesfully!')
     }
 
     return ( 

@@ -14,16 +14,16 @@ import { getAuth } from "firebase/auth";
 // };
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCLfvLLEtqJXgeCcxKxrSWchmg0orORDWU",
-  authDomain: "tbc-blog-d3cb6.firebaseapp.com",
-  databaseURL: "https://tbc-blog-d3cb6-default-rtdb.firebaseio.com",
-  projectId: "tbc-blog-d3cb6",
-  storageBucket: "tbc-blog-d3cb6.appspot.com",
-  messagingSenderId: "1052584444823",
-  appId: "1:1052584444823:web:08606010e08858b6a33ad2",
-  measurementId: "G-6SQ4NL2BL5"
-
+  apiKey: "AIzaSyBGMoH0MTALTZ7xPMON-EFdfuJnznA33DI",
+  authDomain: "blog-4e5ff.firebaseapp.com",
+  projectId: "blog-4e5ff",
+  storageBucket: "blog-4e5ff.appspot.com",
+  messagingSenderId: "1014212089464",
+  appId: "1:1014212089464:web:988424c4ad2aa4e9f4bf8d",
+  measurementId: "G-D9192JDJ53"
 };
+
+
 
 
 // Initialize Firebase

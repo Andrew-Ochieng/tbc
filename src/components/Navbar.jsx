@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FaRegTimesCircle } from "react-icons/fa"
 import { HiMenuAlt3 } from "react-icons/hi"
-import logo from "../assets/tbc-nrb.svg"
+import logo from "../assets/tbc-logo.png"
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -21,7 +21,7 @@ export default function Navbar() {
           <div className="md:flex justify-between items-center">
               <div className="flex justify-between items-center">
                   <Link to='/' className="flex items-center justify-center    ">
-                      <div className="md:w-48 w-32">
+                      <div className="md:w-52 w-36">
                         <img src={logo} alt="Church logo" />
                       </div>
                   </Link>

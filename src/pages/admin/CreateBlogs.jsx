@@ -4,7 +4,7 @@ import { db } from "../../firebase/firebaseConfig"
 import { toast, ToastContainer } from "react-toastify"
 import { useNavigate } from "react-router-dom"
 
-const AddBlogs = () => {
+const CreateBlogs = () => {
     const navigate = useNavigate()
     
     const [title, setTitle] = useState('')
@@ -24,7 +24,7 @@ const AddBlogs = () => {
     
             toast.success('New blog created succesfully')
             setTimeout(() => {
-                navigate('/blogs')
+                navigate('/admin/blogs')
             }, 3000);
         } else {
             toast.error('Fill in the form & try again')
@@ -92,4 +92,4 @@ const AddBlogs = () => {
      );
 }
  
-export default AddBlogs;
+export default CreateBlogs;

@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
-import About from './pages/About'
+import About from './pages/about/About'
 import Blog from './pages/Blog'
 import Contact from './pages/Contact'
 import Events from './pages/Events'
@@ -14,8 +14,10 @@ import { useState, useEffect } from 'react'
 import BlogDetails from './components/Blog/BlogDetails'
 import { db } from "./firebase/firebaseConfig"
 import { getDocs, collection } from 'firebase/firestore'
-import AddBlogs from './pages/admin/AddBlogs'
+import CreateBlogs from './pages/admin/CreateBlogs'
 import Login from './pages/admin/Login'
+import Blogs from './pages/admin/Blogs'
+import Gallery from './pages/about/Gallery'
 function App() {
   const [posts, setPosts] = useState([])
   const [isLoading, setIsLoading] = useState(true)
@@ -47,6 +49,7 @@ function App() {
         <Navbar /> 
         <Routes>
           <Route path='/' element={ <Home posts={posts} /> } />
+          <Route path='/gallery' element={ <Gallery /> } />
           <Route path='/about' element={ <About /> } />
           <Route path='/services' element={ <Services /> } />
           <Route path='/ministries' element={ <Ministries />} />
@@ -56,7 +59,8 @@ function App() {
           <Route path='/blogs/:id' element={ <BlogDetails posts={posts} isLoading={isLoading} error={error} /> } />
 
           <Route path='/admin' element={ <Login /> } />
-          <Route path='/addblogs' element={ <AddBlogs /> } />
+          <Route path='/admin/create' element={ <CreateBlogs /> } />
+          <Route path='/admin/blogs' element={ <Blogs posts={posts} /> } />
         </Routes>
         <Footer />
       </BrowserRouter>

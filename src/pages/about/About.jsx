@@ -1,6 +1,6 @@
-import Intro from "../components/About/Intro";
-import Leadership from "../components/About/Leadership";
-import Gallery from "../components/About/Gallery";
+import Intro from "../../components/About/Intro";
+import Leadership from "../../components/About/Leadership";
+import Gallery from "../../components/About/Gallery";
 
 export default function About() {
   return (

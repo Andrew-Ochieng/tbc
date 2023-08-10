@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-
+import logo from "../assets/tbc-logo.png"
 
 export default function Footer() {
   const years = new Date()
@@ -12,7 +12,7 @@ export default function Footer() {
           <footer className="md:px-24 px-4 bg-base-300 footer p-10 text-base-content">
             <div>
               <div className="md:w-48 w-32">
-                <img src="tbc-nrb.svg" alt="" />
+              <img src={logo} alt="" />
               </div>
               <div className="space-y-1 md:mt-4 mt-2 md:">
                 <p>P.O. Box 14 - 50406</p>
