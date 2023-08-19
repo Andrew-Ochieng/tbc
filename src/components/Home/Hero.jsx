@@ -1,55 +1,65 @@
 import { Link } from "react-router-dom";
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/react-splide/css';
+// import { Splide, SplideSlide } from '@splidejs/react-splide';
+// import '@splidejs/react-splide/css';
 import about1 from "../../assets/about1.jpg"
 import about2 from "../../assets/about2.jpg"
 import about3 from "../../assets/about3.jpg"
 import about4 from "../../assets/about4.jpg"
+import { useState, useEffect } from "react";
+import { BsArrowRight,BsArrowLeft } from 'react-icons/bs'
+
 
 const Hero = () => {
-    const slides = [
-        {image: about1},
-        {image: about2},
-        {image: about3},
-        {image: about4},
+    const images = [
+        {url: about1},
+        {url: about2},
+        {url: about3},
+        {url: about4},
     ]
+
+    const [current, setCurrent] = useState(0)
+    const length = images.length
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+          setCurrent(current === length - 1 ? 0 : current + 1)
+        }, 5000)
+        return () => clearTimeout(timeout)
+      }, [current, length])
+
+      if (!Array.isArray(images) || images.length <= 0) {
+        return null
+      }
+    
 
     return ( 
         <>
             <div className="md:pb-24">
-                <Splide 
-                        className="bg-gray-800 opacity-90 w-full md:h-[500px] h-[270px] bg-cover"
-                        options={{
-                        type: "loop",
-                        perPage: 1,
-                        perMove: 1,
-                        autoplay: true,
-                        interval: 3000,
-                        pauseOnHover: false,
-                        pauseOnFocus: false,
-                        arrows: false,
-                        pagination: true,
-                        drag: true,
-                        }}
-                        aria-label="Home Hero Carousel"
-                    >
-                        {slides.map((slide, index) => (
-                            <SplideSlide key={index}>
-                                <img src={slide.image} alt="slide" className="rounded-none lg:h-[650px] md:h-[400px] h-[270px] w-full" />
-                            </SplideSlide>
-                        ))}
-                    </Splide>
-                    <div className="hero lg:min-h-screen md:h-[400px] h-[270px] bg-gray-700 opacity-70 absolute md:top-[110px] top-[65px]" >
-                        <div className="md:hero-content px-4 text-center">
-                            <div className="max-w-lg md:z-[0] z-[100] text-white">
-                                <h1 className="md:text-5xl text-2xl font-bold ">Welcome to our Worship Services</h1>
-                                <p className="py-6 md:text-base text-sm">We exist to glorify God through the preaching and teaching of the Bible with the aim that sinners will be saved and that saints will grow to Christian maturity.</p>
-                                <Link to='/about' className="btn btn-info">
-                                    About Us
-                                </Link>
+                <div className="bg-gray-700 opacity-70">
+                    {images.map((image, index) => (
+                            <div className={index === current ? 'slide active' : 'slide'} key={index}>
+                                {index === current && (
+                                    <img
+                                        src={image.url} 
+                                        alt="hero-image" 
+                                        className="lg:min-h-screen sm:h-[500px] h-[350px] w-full object-cover"
+                                    />
+                                )}
                             </div>
+                        )
+                    )}
+                </div>
+                <div className="mt-0 hero lg:min-h-screen md:h-[400px] h-[270px] absolute md:top-[110px] top-[100px]">
+                    <div className="md:hero-content px-4 text-center">
+                        <div className="max-w-lg md:z-[0] z-[100] text-white">
+                            <h1 className="md:text-5xl text-3xl font-bold ">Welcome to our Worship Services</h1>
+                            <p className="py-6 md:text-lg text-sm">We exist to glorify God through the preaching and teaching of the Bible with the aim that sinners will be saved and that saints will grow to Christian maturity.</p>
+                            <Link to='/contact' className="btn btn-info">
+                                Contact Us
+                            </Link>
                         </div>
                     </div>
+                </div>
             </div>
             
         </>

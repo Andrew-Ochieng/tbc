@@ -5,7 +5,6 @@ import Navbar from './components/Navbar'
 import About from './pages/about/About'
 import Blog from './pages/Blog'
 import Contact from './pages/Contact'
-import Events from './pages/Events'
 import Home from './pages/Home'
 import Ministries from './pages/Ministries'
 import TopNav from './components/TopNav'
@@ -54,7 +53,6 @@ function App() {
           <Route path='/services' element={ <Services /> } />
           <Route path='/ministries' element={ <Ministries />} />
           <Route path='/blogs' element={ <Blog posts={posts} isLoading={isLoading} error={error} /> } />
-          <Route path='/events' element={ <Events /> } />
           <Route path='/contact' element={ <Contact /> } />
           <Route path='/blogs/:id' element={ <BlogDetails posts={posts} isLoading={isLoading} error={error} /> } />
 
