@@ -15,10 +15,6 @@ export default function Navbar() {
         {id: 6,name: "Contact", route: "/contact"}
     ]
 
-    // useLayoutEffect(() => {
-    //     window.scrollTo(0, 0)
-    // });
-
   return (
     <>
       <nav className="md:px-24 px-4 md:py-5 py-5 top-0 md:sticky z-[100] bg-white shadow-lg"> 
