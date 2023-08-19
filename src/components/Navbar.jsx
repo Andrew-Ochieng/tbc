@@ -3,12 +3,22 @@ import { useState } from "react";
 import { FaRegTimesCircle } from "react-icons/fa"
 import { HiMenuAlt3 } from "react-icons/hi"
 import logo from "../assets/tbc-logo.png"
-import { navlinks } from "../data/navlinks";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
-    
+    const navLinks = [
+        {id: 1,name: "About", route: "/about"},
+        {id: 2,name: "Services", route: "/services"},
+        {id: 3,name: "Ministries", route: "/ministries"},
+        {id: 4,name: "Blog", route: "/blogs"},
+        {id: 6,name: "Contact", route: "/contact"}
+    ]
+
+    // useLayoutEffect(() => {
+    //     window.scrollTo(0, 0)
+    // });
+
   return (
     <>
       <nav className="md:px-24 px-4 md:py-5 py-5 top-0 md:sticky z-[100] bg-white shadow-lg"> 
@@ -26,7 +36,7 @@ export default function Navbar() {
 
               <div className='md:flex hidden text-cyan-700'>
                   <ul className="md:flex items-center font-medium lg:space-x-6 md:space-x-4">
-                      {navlinks.map((nav) => (
+                      {navLinks.map((nav) => (
                           <li key={nav.id} className="navlink md:my-0 my-2 md:text-lg">
                               <Link to={nav.route}>
                                   {nav.name}
@@ -45,7 +55,7 @@ export default function Navbar() {
                   </button> 
               </div>
               <ul className="flex flex-col text-lg font-medium space-y-4 text-gray-200">
-                  {navlinks.map((nav) => (
+                  {navLinks.map((nav) => (
                       <li key={nav.id} onClick={() => setOpen((prev) => !prev)} className="navlink  mx-2 md:my-0 my-2">
                           <Link to={nav.route}>
                               {nav.name}

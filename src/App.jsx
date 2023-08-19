@@ -17,6 +17,7 @@ import CreateBlogs from './pages/admin/CreateBlogs'
 import Login from './pages/admin/Login'
 import Blogs from './pages/admin/Blogs'
 import Gallery from './pages/about/Gallery'
+import ScrollToTop from './components/ScrollToTop'
 function App() {
   const [posts, setPosts] = useState([])
   const [isLoading, setIsLoading] = useState(true)
@@ -44,6 +45,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
+        <ScrollToTop />
         <TopNav />
         <Navbar /> 
         <Routes>

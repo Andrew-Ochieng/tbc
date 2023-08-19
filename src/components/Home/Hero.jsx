@@ -1,13 +1,10 @@
 import { Link } from "react-router-dom";
-// import { Splide, SplideSlide } from '@splidejs/react-splide';
-// import '@splidejs/react-splide/css';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/react-splide/css';
 import about1 from "../../assets/about1.jpg"
-import about2 from "../../assets/about2.jpg"
-import about3 from "../../assets/about3.jpg"
-import about4 from "../../assets/about4.jpg"
-import { useState, useEffect } from "react";
-import { BsArrowRight,BsArrowLeft } from 'react-icons/bs'
-
+import about2 from "../../assets/about5.jpg"
+import about3 from "../../assets/gallery9.jpg"
+import about4 from "../../assets/gallery11.jpg"
 
 const Hero = () => {
     const images = [
@@ -17,45 +14,39 @@ const Hero = () => {
         {url: about4},
     ]
 
-    const [current, setCurrent] = useState(0)
-    const length = images.length
-
-    useEffect(() => {
-        const timeout = setTimeout(() => {
-          setCurrent(current === length - 1 ? 0 : current + 1)
-        }, 5000)
-        return () => clearTimeout(timeout)
-      }, [current, length])
-
-      if (!Array.isArray(images) || images.length <= 0) {
-        return null
-      }
-    
-
     return ( 
         <>
             <div className="md:pb-24">
-                <div className="bg-gray-700 opacity-70">
+                <Splide
+                    options={{
+                    type: "loop",
+                    perPage: 1,
+                    perMove: 1,
+                    autoplay: true,
+                    interval: 3000,
+                    pauseOnHover: false,
+                    pauseOnFocus: false,
+                    arrows: false,
+                    pagination: false,
+                    drag: true,
+                    }}
+                    aria-label="Home Hero Carousel"
+                >
                     {images.map((image, index) => (
-                            <div className={index === current ? 'slide active' : 'slide'} key={index}>
-                                {index === current && (
-                                    <img
-                                        src={image.url} 
-                                        alt="hero-image" 
-                                        className="lg:min-h-screen sm:h-[500px] h-[350px] w-full object-cover"
-                                    />
-                                )}
-                            </div>
-                        )
-                    )}
-                </div>
-                <div className="mt-0 hero lg:min-h-screen md:h-[400px] h-[270px] absolute md:top-[110px] top-[100px]">
+                        <SplideSlide 
+                        className="lg:min-h-screen md:h-[400px] h-[280px] w-full"
+                        key={index}>
+                            <img src={image.url} alt="slide" className="lg:h-[650px] md:h-[400px] h-[280px] w-full object-cover" />
+                        </SplideSlide>
+                    ))}
+                </Splide>
+                <div className="hero lg:min-h-screen md:h-[400px] h-[280px] bg-gray-700 opacity-70 absolute md:top-[110px] top-[65px]" >
                     <div className="md:hero-content px-4 text-center">
                         <div className="max-w-lg md:z-[0] z-[100] text-white">
-                            <h1 className="md:text-5xl text-3xl font-bold ">Welcome to our Worship Services</h1>
-                            <p className="py-6 md:text-lg text-sm">We exist to glorify God through the preaching and teaching of the Bible with the aim that sinners will be saved and that saints will grow to Christian maturity.</p>
+                            <h1 className="md:text-5xl text-2xl font-bold ">Welcome to our Worship Services</h1>
+                            <p className="py-6 md:text-base text-sm">We exist to glorify God through the preaching and teaching of the Bible with the aim that sinners will be saved and that saints will grow to Christian maturity.</p>
                             <Link to='/contact' className="btn btn-info">
-                                Contact Us
+                                Reach Out
                             </Link>
                         </div>
                     </div>

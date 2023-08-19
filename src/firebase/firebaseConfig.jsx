@@ -13,7 +13,6 @@ import { getAuth } from "firebase/auth";
 //   measurementId: import.meta.env.VITE_MEASUREMENT_ID
 // };
 
-
 const firebaseConfig = {
   apiKey: "AIzaSyBGMoH0MTALTZ7xPMON-EFdfuJnznA33DI",
   authDomain: "blog-4e5ff.firebaseapp.com",
@@ -23,6 +22,7 @@ const firebaseConfig = {
   appId: "1:1014212089464:web:988424c4ad2aa4e9f4bf8d",
   measurementId: "G-D9192JDJ53"
 };
+
 
 
 
