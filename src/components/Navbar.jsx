@@ -17,17 +17,17 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="md:px-24 px-4 md:py-5 py-5 top-0 md:sticky z-[100] bg-white shadow-lg"> 
+      <nav className="md:px-24 px-4 md:py-5 py-5 top-0 left-0 sticky z-[100] bg-white opacity-90 shadow-lg"> 
           <div className="md:flex justify-between items-center">
               <div className="flex justify-between items-center">
-                  <Link to='/' className="flex items-center justify-center    ">
-                      <div className="md:w-52 w-36">
-                        <img src={logo} alt="Church logo" />
-                      </div>
-                  </Link>
-                  <button onClick={() => setOpen((prev) => !prev)} className=' sm:hidden text-2xl text-gray-900'>
-                       <HiMenuAlt3 />
-                  </button>
+                    <Link to='/' className="flex items-center justify-center    ">
+                        <div className="md:w-52 w-36">
+                            <img src={logo} alt="Church logo" />
+                        </div>
+                    </Link>
+                    <button onClick={() => setOpen((prev) => !prev)} className=' sm:hidden text-2xl text-gray-900'>
+                        <HiMenuAlt3 />
+                    </button>
               </div>
 
               <div className='md:flex hidden text-cyan-700'>
@@ -44,15 +44,19 @@ export default function Navbar() {
           </div>
 
           {/* mobile-version */}
-          <div className={`${open ? "top-0 " : "top-[-100%]"} z-[100] sm:hidden absolute left-0 right-0 py-6 px-5 w-[100%] duration-1000 ease-in-out bg-cyan-700 opacity-95`}>
+          <div className={`${open ? "left-0 " : "left-[-100%]"} z-[100] sm:hidden absolute bottom-0 top-0 right-0 py-6 px-5 w-[100%] h-screen duration-1000 ease-in-out bg-cyan-700 opacity-95`}>
               <div className="flex justify-end">
                   <button onClick={() => setOpen((prev) => !prev)} className="sm:hidden text-2xl text-gray-200 text-right">
                       <FaRegTimesCircle />
                   </button> 
               </div>
-              <ul className="flex flex-col text-lg font-medium space-y-4 text-gray-200">
+              <ul className="flex flex-col text-lg font-medium space-y-4 text-gray-200 mt-8">
                   {navLinks.map((nav) => (
-                      <li key={nav.id} onClick={() => setOpen((prev) => !prev)} className="navlink  mx-2 md:my-0 my-2">
+                      <li 
+                        key={nav.id} 
+                        onClick={() => setOpen((prev) => !prev)} 
+                        className="navlink mx-2 uppercase hover:bg-white hover:text-gray-600 py-1 px-2 rounded-md hover:cursor-pointer"
+                    >
                           <Link to={nav.route}>
                               {nav.name}
                           </Link>

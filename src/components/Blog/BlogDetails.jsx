@@ -1,4 +1,5 @@
 import { Link, useParams } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const BlogDetails = ({posts, isLoading, error}) => {
     const { id } = useParams()
@@ -33,12 +34,16 @@ const BlogDetails = ({posts, isLoading, error}) => {
                                 </span>
                             </h2>
                             
-                            <p className="normal-case font-light md:text-base text-sm">{post.body}</p>
-                            <p className="pt-4">
-                            <Link to='/blogs' className="font-base underline text-cyan-600">
-                                {post ? "Back" : 'Nothing to display here..'}
-                            </Link>
-                            </p>
+                            <p className="md:text-lg text-base text-gray-700 leading-loose tracking-wide">{post.body}</p>
+                            <motion.div 
+                                whileHover={{x: 8}}
+                                transition={{type: 'spring', stiffness: 120}}
+                                className="mt-4"
+                                >
+                                <Link to='/blogs' className="font-base underline text-cyan-600">
+                                    {post ? "Back" : 'Nothing to display here..'}
+                                </Link>
+                            </motion.div>
                         </div>
                     )}
                 </div>

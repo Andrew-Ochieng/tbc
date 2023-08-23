@@ -4,7 +4,7 @@ import HomeCards from "../components/Home/HomeCards";
 import { Link } from "react-router-dom";
 import BlogList from "../components/Blog/BlogList";
 
-export default function Home({posts}) {
+export default function Home({posts, isLoading, error}) {
   return (
     <div>
       <Hero />
@@ -15,7 +15,15 @@ export default function Home({posts}) {
           <h3 className="sub-title">Blog</h3>
           <Link className="sub-title text-cyan-700  hover:underline" to='/blogs'>View All</Link>
         </div>
-        <BlogList posts={posts.slice(0,3)} />
+          {isLoading ? (
+          <div className=" flex flex-col items-center justify-center">
+            <p className="text-cyan-600 font-light md:text-3xl text-lg">Loading blog posts...</p>
+          </div>
+        ) : (
+          <div className="my-8 md:mx-24 mx-4 ">
+            <BlogList posts={posts.slice(0,3)} />
+          </div>
+        )}
       </div>
     </div>
   )

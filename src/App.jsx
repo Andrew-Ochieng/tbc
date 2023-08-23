@@ -49,7 +49,7 @@ function App() {
         <TopNav />
         <Navbar /> 
         <Routes>
-          <Route path='/' element={ <Home posts={posts} /> } />
+          <Route path='/' element={ <Home posts={posts} isLoading={isLoading} error={error} /> } />
           <Route path='/gallery' element={ <Gallery /> } />
           <Route path='/about' element={ <About /> } />
           <Route path='/services' element={ <Services /> } />
