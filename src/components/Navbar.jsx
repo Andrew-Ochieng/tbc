@@ -11,13 +11,13 @@ export default function Navbar() {
         {id: 1,name: "About", route: "/about"},
         {id: 2,name: "Services", route: "/services"},
         {id: 3,name: "Ministries", route: "/ministries"},
-        {id: 4,name: "Blog", route: "/blogs"},
+        {id: 4,name: "Blog", route: "/articles"},
         {id: 6,name: "Contact", route: "/contact"}
     ]
 
   return (
     <>
-      <nav className="md:px-24 px-4 md:py-5 py-5 top-0 left-0 sticky z-[100] bg-white opacity-90 shadow-lg"> 
+      <nav className="md:px-24 px-4 md:py-5 py-5 top-0 left-0 sticky z-[100] bg-white opacity-95 shadow-lg"> 
           <div className="md:flex justify-between items-center">
               <div className="flex justify-between items-center">
                     <Link to='/' className="flex items-center justify-center    ">

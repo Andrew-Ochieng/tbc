@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
+import { MoonLoader } from "react-spinners";
 
 const BlogDetails = ({posts, isLoading, error}) => {
     const { id } = useParams()
@@ -18,7 +19,13 @@ const BlogDetails = ({posts, isLoading, error}) => {
             {error && (<p>{error}</p>)}
             {isLoading ? (
                 <div className="md:min-h-screen h-64 flex flex-col items-center justify-center">
-                    <p className="text-cyan-600 font-light md:text-5xl text-lg">Loading blog post...</p>
+                    <MoonLoader
+                        color="#00ced1"
+                        loading={isLoading}
+                        size={50}
+                        aria-label="Loading Content..."
+                        data-testid="loader"
+                    />
                 </div>
             ) : (
                 <div className="md:mx-24 mx-4 md:my-16 my-8">
@@ -40,7 +47,7 @@ const BlogDetails = ({posts, isLoading, error}) => {
                                 transition={{type: 'spring', stiffness: 120}}
                                 className="mt-4"
                                 >
-                                <Link to='/blogs' className="font-base underline text-cyan-600">
+                                <Link to='/articles' className="font-base underline text-cyan-600">
                                     {post ? "Back" : 'Nothing to display here..'}
                                 </Link>
                             </motion.div>
