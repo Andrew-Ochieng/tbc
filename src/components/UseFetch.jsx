@@ -1,23 +1,29 @@
 import { useEffect, useState } from "react";
-// import axios from "axios";
+import axios from "axios";
 
-const UseFetch = (url) => {
-    const [allData, setAllData] = useState([])
-    // const [loading, setLoading] = useState(true)
-    // const [error, setError] = useState(null)
+export const UseFetch = (url) => {
+    const [data, setData] = useState([])
+    const [isLoading, setIsLoading] = useState(true)
+    const [error, setError] = useState(false)
 
     useEffect(() => {
-        fetch(url)
-        .then((res) => res.json())
-        .then((data) => {
-            // console.log(data)
-            setAllData(data)
-            // setLoading(false)
-            // setError(null)
-        })
+        axios.get(url)
+            .then((res) => {
+                // const posts = res.data
+                console.log(res)
+                setData(res.data)
+                setIsLoading(false)
+                setError(false)
+            })
+            .catch((err) => {
+                console.log(err)
+                setLoading(false)
+                setError(true)
+            })
     }, [url])
-
-    return { allData };
+    
+    return ({ data, isLoading, error });
 }
  
-export default UseFetch;
+
+ 

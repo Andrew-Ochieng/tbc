@@ -29,7 +29,7 @@ export default function Home({posts, isLoading, error}) {
           </div>
         ) : (
           <div className="my-8 md:mx-24 mx-4 ">
-            <BlogList posts={posts.slice(0,3)} />
+            <BlogList posts={posts} />
           </div>
         )}
       </div>

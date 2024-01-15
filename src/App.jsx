@@ -9,38 +9,16 @@ import Home from './pages/Home'
 import Ministries from './pages/Ministries'
 import TopNav from './components/TopNav'
 import Services from './pages/Services'
-import { useState, useEffect } from 'react'
 import BlogDetails from './components/Blog/BlogDetails'
-import { db } from "./firebase/firebaseConfig"
-import { getDocs, collection } from 'firebase/firestore'
 import CreateBlogs from './pages/admin/CreateBlogs'
 import Login from './pages/admin/Login'
 import Blogs from './pages/admin/Blogs'
 import Gallery from './pages/about/Gallery'
 import ScrollToTop from './components/ScrollToTop'
+import { UseFetch } from './components/UseFetch'
 function App() {
-  const [posts, setPosts] = useState([])
-  const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState(false)
-  const postsCollectionRef = collection(db, "blogs")
-
-  useEffect(() => {
-    const getPosts = async () => {
-      try {
-        const data = await getDocs(postsCollectionRef)
-        setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
-        setIsLoading(false)
-        setError(false)
-      } catch (err) {
-        console.log(err)
-        setIsLoading(false)
-        setError(true)
-      }
-    }
-
-    getPosts()
-  }, [])
-
+const {data: posts, isLoading, error } = UseFetch('http://localhost:8000/api/articles/')
+console.log(posts)
  
   return (
     <>
@@ -55,9 +33,9 @@ function App() {
           <Route path='/services' element={ <Services /> } />
           <Route path='/ministries' element={ <Ministries />} />
           <Route path='/articles' element={ <Blog posts={posts} isLoading={isLoading} error={error} /> } />
+          <Route path='/articles/:slug' element={ <BlogDetails posts={posts} isLoading={isLoading} error={error} /> } />
           <Route path='/contact' element={ <Contact /> } />
-          <Route path='/articles/:id' element={ <BlogDetails posts={posts} isLoading={isLoading} error={error} /> } />
-
+          
           <Route path='/admin' element={ <Login /> } />
           <Route path='/admin/create' element={ <CreateBlogs /> } />
           <Route path='/admin/blogs' element={ <Blogs posts={posts} /> } />

@@ -45,7 +45,7 @@
     }
 
     .content-title {
-        @apply md:text-2xl text-xl md:mb-6 mb-4 font-semibold capitalize
+        @apply md:text-2xl text-xl md:mb-6 mb-4 font-semibold capitalize text-gray-700
     }
 
     .btn {
@@ -61,7 +61,7 @@
     }
 
     .list-container {
-        @apply md:m-24 m-4 md:gap-16 gap-8 grid md:grid-cols-3
+        @apply md:mx-0 md:my-16 m-4 md:gap-16 gap-8 grid md:grid-cols-3
     }
 
     .card {

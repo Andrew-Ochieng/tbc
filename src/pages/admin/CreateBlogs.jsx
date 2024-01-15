@@ -1,8 +1,9 @@
 import { useState } from "react"
-import { addDoc, collection } from "firebase/firestore"
-import { db } from "../../firebase/firebaseConfig"
 import { toast, ToastContainer } from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from "react-router-dom"
+import TextEditor from "./TextEditor";
+
 
 const CreateBlogs = () => {
     const navigate = useNavigate()
@@ -10,6 +11,7 @@ const CreateBlogs = () => {
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
     const [author, setAuthor] = useState('')
+    const [image_link, setImageLink] = useState('')
     const postsCollectionRef = collection(db, "blogs")
     
     const handleAddBlog = async (e) => {
@@ -58,26 +60,30 @@ const CreateBlogs = () => {
                                 required 
                             />
                         </div>
-                        <input 
-                                className="input border border-cyan-500" 
-                                type="text" 
-                                name="name" 
-                                value={author}
-                                onChange={(e) => setAuthor(e.target.value)}
-                                placeholder="Write autor..." 
-                                required 
-                            />
                         <div className="label">
-                            <textarea 
-                                className="border border-cyan-500 py-2 px-3 rounded-lg w-full outline-none" 
-                                name="message" 
-                                value={body}
-                                onChange={(e) => setBody(e.target.value)}
-                                placeholder="Write Content..." 
-                                cols="30" 
-                                rows="6"
-                            >
-                            </textarea>
+                            <input 
+                                    className="input border border-cyan-500" 
+                                    type="text" 
+                                    name="name" 
+                                    value={author}
+                                    onChange={(e) => setAuthor(e.target.value)}
+                                    placeholder="Write author..." 
+                                    required 
+                                />
+                        </div>
+                        <div className="label">
+                            <input 
+                                    className="input border border-cyan-500" 
+                                    type="text" 
+                                    name="image-url" 
+                                    value={image_link}
+                                    onChange={(e) => setImageLink(e.target.value)}
+                                    placeholder="Write image url..." 
+                                    required 
+                                />
+                        </div>
+                        <div className="label">
+                            <TextEditor body={body} setBody={setBody} />
                         </div>
                         <button 
                             className="btn w-full mt-4"
