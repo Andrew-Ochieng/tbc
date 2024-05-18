@@ -1,9 +1,17 @@
 import { Link } from "react-router-dom"
-import logo from "../assets/tbc-logo.png"
+import logo from "../../assets/tbc-logo.png"
+import { FaChevronUp } from "react-icons/fa6";
 
 export default function Footer() {
-  const years = new Date()
-  let year = years.getFullYear()
+  const today = new Date()
+  let year = today.getFullYear()
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
 
   return (
     <>
@@ -48,6 +56,12 @@ export default function Footer() {
         </div>
       </div>
 
+      <button
+        onClick={scrollToTop}
+        className="fixed md:bottom-10 bottom-6 md:right-6 right-4 md:p-3 p-2 bg-cyan-600 text-white shadow-md focus:outline-none"
+        >
+            <FaChevronUp />
+      </button>
     </>
   )
 }

@@ -18,7 +18,7 @@ export default function Intro() {
                                 <p className="font-light text-gray-700 md:text-base text-sm tracking-wide md:leading-relaxed leading-normal">{item.content}</p>
                             </div>
                             <div className="w-full ">
-                                <img src={item.image} alt="" className="md:min-w-full w-full md:rounded-tr-2xl md:rounded-b-none rounded-b-xl"/>
+                                <img src={item.image} alt="" className="h-full  w-full"/>
                             </div>
                         </div>
                     ))}

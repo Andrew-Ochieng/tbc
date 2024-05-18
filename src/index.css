@@ -4,10 +4,12 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900;6..12,1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 
 * {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 .wrapper{
@@ -48,8 +50,8 @@
         @apply md:text-2xl text-xl md:mb-6 mb-4 font-semibold capitalize text-gray-700
     }
 
-    .btn {
-        @apply hover:translate-y-1 hover:scale-105 px-4 py-1 bg-gradient-to-r from-cyan-500 to-cyan-700 border-none text-white duration-500 rounded-lg 
+    .btns {
+        @apply  px-3 py-1 rounded-md bg-gradient-to-r from-cyan-500 to-cyan-700 border-none text-white duration-500 hover:translate-x-1 hover:scale-105 
       }
 
     .input {

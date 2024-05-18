@@ -1,60 +1,44 @@
+import { Carousel, Typography, Button } from "@material-tailwind/react";
+import { heroData } from "../../data/content";
 import { Link } from "react-router-dom";
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/react-splide/css';
-import about1 from "../../assets/about1.jpg"
-import about2 from "../../assets/about5.jpg"
-import about3 from "../../assets/gallery9.jpg"
-import about4 from "../../assets/gallery11.jpg"
-
-const Hero = () => {
-    const images = [
-        {url: about1},
-        {url: about2},
-        {url: about3},
-        {url: about4},
-    ]
-
-    return ( 
-        <>
-            <div className="md:pb-24">
-                <Splide
-                    options={{
-                    type: "loop",
-                    perPage: 1,
-                    perMove: 1,
-                    autoplay: true,
-                    interval: 3000,
-                    pauseOnHover: false,
-                    pauseOnFocus: false,
-                    arrows: false,
-                    pagination: false,
-                    drag: true,
-                    }}
-                    aria-label="Home Hero Carousel"
-                >
-                    {images.map((image, index) => (
-                        <SplideSlide 
-                        className="lg:min-h-screen md:h-[400px] h-[280px] w-full"
-                        key={index}>
-                            <img src={image.url} alt="slide" className="lg:h-[650px] md:h-[400px] h-[280px] w-full object-cover" />
-                        </SplideSlide>
-                    ))}
-                </Splide>
-                <div className="hero lg:min-h-screen md:h-[400px] h-[280px] bg-gray-700 opacity-70 absolute md:top-[110px] top-[65px]" >
-                    <div className="md:hero-content px-4 text-center">
-                        <div className="max-w-lg md:z-[0] z-[100] text-white">
-                            <h1 className="md:text-5xl text-2xl font-bold ">Welcome to our Worship Services</h1>
-                            <p className="py-6 md:text-base text-sm">We exist to glorify God through the preaching and teaching of the Bible with the aim that sinners will be saved and that saints will grow to Christian maturity.</p>
-                            <Link to='/contact' className="btn btn-info">
-                                Reach Out
-                            </Link>
+export default function Hero() {
+  return (
+    <Carousel className="">
+        {heroData.map((item, index) => (
+            <div key={index} className="relative h-full w-full">
+                <img
+                src={item.imageUrl}
+                alt="image 1"
+                className="h-screen w-full object-cover"
+                />
+                <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
+                    <div className="w-3/4 text-center md:w-2/4">
+                        <Typography
+                        variant="h1"
+                        color="white"
+                        className="mb-4 text-3xl md:text-4xl lg:text-5xl"
+                        >
+                        {item.title}
+                        </Typography>
+                        <Typography
+                        variant="lead"
+                        color="white"
+                        className="mb-12 opacity-80"
+                        >
+                            {item.content}
+                        </Typography>   
+                        <div className="flex justify-center gap-2">
+                        <Button size="lg" color="cyan">
+                            <Link to='/contact'>Find Us</Link>
+                        </Button>
+                        <Button size="lg" color="white" variant="text">
+                            <Link to='/about'>Find Us</Link>
+                        </Button>
                         </div>
                     </div>
                 </div>
             </div>
-            
-        </>
-     );
+        ))}    
+    </Carousel>
+  );
 }
- 
-export default Hero;

@@ -9,16 +9,18 @@ export default function
             <div className="section-title text-center">
                 <h3>Our Leaders</h3>
             </div>
-            <div className="grid md:grid-cols-2 md:gap-16 gap-8 md:m-16 m-6">
+            <div className="md:m-16 m-6">
                 {leaders.map((item, index) => (
                     <Slide bottom>
-                    <div key={index} className="flex flex-col items-center text-center justify-center max-w-md">
-                        <img src={item.image} alt="" className="rounded-xl md:w-72 md:h-80 w-64 h-72 " />
+                    <div key={index} className="grid md:grid-cols-2 md:gap-16 gap-8">
+                        <div>
+                            <img src={item.image} alt="" className=" " />
+                        </div>
                         <div className="md:my-6 my-3">
                             <h3 className="uppercase text-cyan-800 md:text-3xl">{item.name}</h3>
-                            <h5 className="font-semibold md:text-xl text-lg text-gray-700">{item.post}</h5>
+                            <h5 className="font-semibold my-4 md:text-xl text-lg text-gray-700">{item.post}</h5>
+                            <p className="font-light text-gray-800 md:text-lg ">{item.content}</p>
                         </div>
-                        <p className="font-light text-gray-800 md:text-lg ">{item.content}</p>
                     </div>
                     </Slide>
                 ))}
