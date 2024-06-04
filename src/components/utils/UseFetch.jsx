@@ -17,7 +17,7 @@ export const UseFetch = (url) => {
             })
             .catch((err) => {
                 console.log(err)
-                setLoading(false)
+                setIsLoading(false)
                 setError(true)
             })
     }, [url])

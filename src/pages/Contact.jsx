@@ -15,7 +15,7 @@ export default function Contact() {
                         <h1 className="section-title">Contact Us</h1>
                     </div>
                 </Bounce>
-                <div className="sm:flex justify-around items-center lg:mx-32 md:mx-24 md:py-16 p-6 bg-gray-100 rounded-3xl">
+                <div className="sm:flex justify-around items-center lg:mx-32 md:mx-24 md:py-16 p-6 bg-gray-100 ">
                     <div>
                         <motion.div 
                             initial={{x: "-100vw", opacity: 0}}

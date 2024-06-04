@@ -27,18 +27,18 @@ const ContactForm = () => {
             <div>
                 <form ref={form} onSubmit={sendEmail} >
                     <div className="label">
-                        <input className="input" type="text" name="name" placeholder="Enter name..." required />
+                        <input className="inputs" type="text" name="name" placeholder="Enter name..." required />
                     </div>
                     <div className="label">
-                        <input className="input" type="email" name="email" placeholder="Enter email..." required />
+                        <input className="inputs" type="email" name="email" placeholder="Enter email..." required />
                     </div>
                     <div className="label">
-                        <input className="input" type="text" name="subject" placeholder="Enter subject..." required />
+                        <input className="inputs" type="text" name="subject" placeholder="Enter subject..." required />
                     </div>
                     <div className="label">
-                        <textarea className="py-2 px-3 rounded-lg w-full outline-none" name="message" placeholder="Enter Message..." cols="30" rows="4"></textarea>
+                        <textarea className="py-2 px-3 w-full outline-none" name="message" placeholder="Enter Message..." cols="30" rows="4"></textarea>
                     </div>
-                    <button className="mt-4 btn rounded-lg flex items-center">
+                    <button className="mt-4 btns  flex items-center">
                         Submit
                         <span className="ml-2">
                             <FaPaperPlane />

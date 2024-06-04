@@ -2,8 +2,12 @@ import { Carousel, Typography, Button } from "@material-tailwind/react";
 import { heroData } from "../../data/content";
 import { Link } from "react-router-dom";
 export default function Hero() {
+
   return (
-    <Carousel className="">
+    <Carousel 
+        loop={true}
+        transition={{ duration: 1.3, type: 'tween'}}
+        >
         {heroData.map((item, index) => (
             <div key={index} className="relative h-full w-full">
                 <img
@@ -28,12 +32,16 @@ export default function Hero() {
                             {item.content}
                         </Typography>   
                         <div className="flex justify-center gap-2">
-                        <Button size="lg" color="cyan">
-                            <Link to='/contact'>Find Us</Link>
-                        </Button>
-                        <Button size="lg" color="white" variant="text">
-                            <Link to='/about'>Find Us</Link>
-                        </Button>
+                            <Link to='/contact'>
+                                <Button size="lg" color="cyan" className="rounded-none">
+                                    Find Us
+                                </Button>
+                            </Link>
+                            <Link to='/about'>
+                                <Button size="lg" color="white" variant="text" className="rounded-none">
+                                    About Us
+                                </Button>
+                            </Link>
                         </div>
                     </div>
                 </div>

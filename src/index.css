@@ -51,11 +51,11 @@
     }
 
     .btns {
-        @apply  px-3 py-1 rounded-md bg-gradient-to-r from-cyan-500 to-cyan-700 border-none text-white duration-500 hover:translate-x-1 hover:scale-105 
+        @apply  px-3 py-1 bg-gradient-to-r from-cyan-500 to-cyan-700 border-none text-white duration-500 hover:translate-x-1 hover:scale-105 
       }
 
-    .input {
-        @apply py-3 px-2 bg-white rounded-lg w-full focus-within:border-cyan-400 outline-none
+    .inputs {
+        @apply py-3 px-2 bg-white w-full focus-within:border-cyan-400 outline-none
     }
     
     .label {
@@ -71,15 +71,15 @@
     }
 
     .card-content {
-        @apply md:p-4 p-3 
+        @apply md:p-4 p-3 border border-cyan-500
     }
 
     .card-title {
-        @apply font-semibold text-gray-700 hover:text-cyan-700
+        @apply font-semibold text-gray-900 hover:text-cyan-700 my-2
     }
 
     .card-description {
-        @apply text-gray-500 font-medium
+        @apply text-gray-700  
     }
 
     .card-image {
