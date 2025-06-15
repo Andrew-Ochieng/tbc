@@ -1,7 +1,7 @@
 import { BookOpen, Heart, Users } from 'lucide-react'
 import React from 'react'
 import { Link } from 'react-router-dom'
-import aboutImg from '../../assets/scriptures.jpg'
+import aboutImg from '../../assets/hero.jpg'
 
 export default function HomeAbout() {
   return (

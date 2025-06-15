@@ -1,6 +1,7 @@
 
 import React from 'react'
 import { Link } from 'react-router-dom'
+import sermonImage from '../../assets/hero4.jpg'
 
 export default function HomeSermons() {
   return (
@@ -19,7 +20,11 @@ export default function HomeSermons() {
             <div className="md:flex">
               <div className="md:w-1/3">
                 <div className="bg-gray-200 h-48 md:h-full flex items-center justify-center">
-                  <p className="text-gray-500">Sermon Thumbnail</p>
+                  <img 
+                    src={sermonImage} 
+                    alt="Sermon Thumbnail"
+                    className="object-cover w-full h-full rounded-l-lg"
+                  />
                 </div>
               </div>
               <div className="md:w-2/3 p-8">
@@ -27,7 +32,7 @@ export default function HomeSermons() {
                   The Grace of God in Salvation
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Pastor Simon Ochieng • Romans 3:21-26 • December 10, 2024
+                  Pastor Simon Ochieng • Romans 3:21-26 • July 15, 2025
                 </p>
                 <p className="text-gray-700 mb-6">
                   In this powerful message, we explore the magnificent grace of God revealed in

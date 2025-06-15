@@ -1,61 +1,33 @@
 import { Link } from 'react-router-dom';
-import { BookOpen, Users, FileText, UserCheck } from 'lucide-react';
+import { aboutPages } from '../data/homeData';
+import headerImage from "../assets/scriptures.jpg"
+import churchImage from "../assets/church.jpg"
+import PageHeader from '../components/PageHeader';
 
 export default function About() {
-  const aboutPages = [
-    {
-      title: 'Statement of Faith',
-      description: 'Our foundational beliefs and doctrinal positions based on Scripture',
-      icon: BookOpen,
-      href: '/about/statement-of-faith',
-      color: 'blue'
-    },
-    {
-      title: 'Our Beliefs',
-      description: 'Core theological convictions that guide our ministry and worship',
-      icon: FileText,
-      href: '/about/our-beliefs',
-      color: 'green'
-    },
-    {
-      title: 'Literature',
-      description: 'Recommended books, resources, and reformed theological materials',
-      icon: FileText,
-      href: '/about/literature',
-      color: 'purple'
-    },
-    {
-      title: 'Our Leaders',
-      description: 'Meet our pastoral staff and church leadership team',
-      icon: Users,
-      href: '/about/our-leaders',
-      color: 'orange'
-    }
-  ];
-
   const getColorClasses = (color) => {
     const colors = {
-      blue: 'bg-sky-100 text-sky-600 hover:bg-sky-200',
+      sky: 'bg-sky-100 text-sky-600 hover:bg-sky-200',
       green: 'bg-green-100 text-green-600 hover:bg-green-200',
       purple: 'bg-purple-100 text-purple-600 hover:bg-purple-200',
       orange: 'bg-yellow-100 text-yellow-600 hover:bg-yellow-200'
     };
-    return colors[color] || colors.blue;
+    return colors[color] || colors.sky;
   };
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-sky-900 to-sky-800 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">About Us</h1>
-            <p className="text-xl md:text-2xl text-sky-100 max-w-3xl mx-auto">
-              Learn more about our church, our beliefs, and our commitment to the Reformed faith
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHeader
+        title="About Us"
+        subtitle="Learn more about our church, our beliefs, and our commitment to the Reformed faith"
+        bgImage={headerImage}
+        overlayColor="rgba(0, 0, 0, 0.6)"
+        gradientFrom="from-sky-900"
+        gradientTo="to-sky-800"
+        height="lg"
+        textColor="text-white"
+        subtitleColor="text-sky-100"
+      />
 
       {/* Church Overview */}
       <section className="py-16">
@@ -80,8 +52,8 @@ export default function About() {
                 raise up faithful disciples who will carry the message of Christ to the ends of the earth.
               </p>
             </div>
-            <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
-              <p className="text-gray-500">Church Building Photo</p>
+            <div className="">
+              <img src={churchImage} alt="Church Building Photo" className='md:h-[400px] h-96 rounded-lg' />
             </div>
           </div>
         </div>

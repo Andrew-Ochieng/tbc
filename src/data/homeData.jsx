@@ -1,4 +1,4 @@
-import { Book, Users, BookOpen, Home, Calendar, Mail, HeartHandshake, BookText, UserRoundCog } from "lucide-react";
+import { Book, Users, BookOpen, Home, Calendar, Mail, HeartHandshake, BookText, UserRoundCog, FileText, UserCheck } from "lucide-react";
 import heroImg from "../assets/hero.jpg";
 import heroImg3 from "../assets/hero3.jpg";
 import heroImg2 from "../assets/hero2.jpg";
@@ -110,6 +110,37 @@ const navList = [
   { name: "Give", href: "/give", icon: <HeartHandshake size={18} /> },
 ];
 
+const aboutPages = [
+    {
+      title: 'Statement of Faith',
+      description: 'Our foundational beliefs and doctrinal positions based on Scripture',
+      icon: BookOpen,
+      href: '/about/statement-of-faith',
+      color: 'sky'
+    },
+    {
+      title: 'Our Beliefs',
+      description: 'Core theological convictions that guide our ministry and worship',
+      icon: FileText,
+      href: '/about/our-beliefs',
+      color: 'green'
+    },
+    {
+      title: 'Literature',
+      description: 'Recommended books, resources, and reformed theological materials',
+      icon: FileText,
+      href: '/about/literature',
+      color: 'purple'
+    },
+    {
+      title: 'Our Leaders',
+      description: 'Meet our pastoral staff and church leadership team',
+      icon: Users,
+      href: '/about/our-leaders',
+      color: 'orange'
+    }
+];
+
 
 const recentArticles = [
   {
@@ -155,4 +186,4 @@ const recentArticles = [
 ];
 
 
-export { heroCarouselData, faqs, navList, recentArticles };
+export { heroCarouselData, faqs, navList, recentArticles, aboutPages };
