@@ -6,21 +6,21 @@ export default function Sermons() {
   const sermons = [
     {
       title: "The Grace of God in Salvation",
-      speaker: "Pastor John Kimani",
+      speaker: "Pastor Simon Ochieng",
       date: "December 10, 2024",
       passage: "Romans 3:21-26",
       description: "In this powerful message, we explore the magnificent grace of God revealed in the Gospel of Jesus Christ and how it transforms our understanding of salvation."
     },
     {
       title: "Walking by Faith",
-      speaker: "Pastor John Kimani",
+      speaker: "Pastor Simon Ochieng",
       date: "December 3, 2024",
       passage: "2 Corinthians 5:7",
       description: "What does it mean to walk by faith and not by sight? This sermon examines the nature of biblical faith and how it should shape our daily lives."
     },
     {
       title: "The Perseverance of the Saints",
-      speaker: "Pastor John Kimani",
+      speaker: "Pastor Simon Ochieng",
       date: "November 26, 2024",
       passage: "Philippians 1:6",
       description: "A study on the biblical doctrine of the perseverance of the saints and the assurance it provides to believers."

@@ -4,6 +4,7 @@ import Hero from '../components/home/Hero';
 import HomeAbout from '../components/home/HomeAbout';
 import HomeSermons from '../components/home/HomeSermons';
 import HomeServices from '../components/home/HomeServices';
+import BlogList from '../components/blogs/BlogList';
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
 
       <HomeSermons />
 
+      <BlogList />
+
       <section className="py-16 bg-sky-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -28,7 +31,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <div className="flex items-center justify-center space-x-2">
               <MapPin className="w-5 h-5" />
-              <span>Busia Town, Busia</span>
+              <span>Funyula Town, Busia</span>
             </div>
             <div className="flex items-center justify-center space-x-2">
               <Calendar className="w-5 h-5" />

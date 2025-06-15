@@ -39,7 +39,7 @@ const Hero = () => {
                       ease: "easeOut"
                     }}
                   >
-                    <span className="text-yellow-400 font-medium block mb-2">
+                    <span className="text-green-400 font-medium block mb-2">
                       {slide.subtitle}
                     </span>
                     <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">
@@ -66,7 +66,7 @@ const Hero = () => {
                       }
                     }}
                   >
-                    <span className="text-3xl font-bold text-yellow-500">
+                    <span className="text-3xl font-bold text-green-500">
                       {slide.stats.main}
                     </span>
                     <span className="text-white ml-2">
@@ -83,7 +83,7 @@ const Hero = () => {
                     <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
                       <Link 
                         to="/about"
-                        className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 rounded-md font-medium flex items-center justify-center min-w-[200px] shadow-lg"
+                        className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-md font-medium flex items-center justify-center min-w-[200px] shadow-lg"
                       >
                         Learn About Us
                         <ChevronRight size={20} className="ml-2" />

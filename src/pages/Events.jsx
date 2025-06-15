@@ -5,22 +5,6 @@ import headerImage from '../assets/scriptures.jpg';
 export default function Events() {
   const events = [
     {
-      title: "Christmas Service",
-      date: "December 25, 2024",
-      time: "9:00 AM",
-      location: "Church Sanctuary",
-      description: "Join us for a special Christmas service celebrating the birth of our Lord and Savior Jesus Christ.",
-      type: "Worship"
-    },
-    {
-      title: "New Year Prayer & Fasting",
-      date: "January 1, 2025",
-      time: "6:00 AM - 6:00 PM",
-      location: "Church Building",
-      description: "Begin the new year with prayer and fasting as we seek God's direction and blessing.",
-      type: "Prayer"
-    },
-    {
       title: "Men's Fellowship Breakfast",
       date: "January 11, 2025",
       time: "7:00 AM",
@@ -35,14 +19,30 @@ export default function Events() {
       location: "Conference Room",
       description: "Weekly women's Bible study focusing on Christian womanhood and spiritual growth.",
       type: "Study"
+    },
+    {
+      title: "Christmas Service",
+      date: "December 25, 2025",
+      time: "9:00 AM",
+      location: "Church Sanctuary",
+      description: "Join us for a special Christmas service celebrating the birth of our Lord and Savior Jesus Christ.",
+      type: "Worship"
+    },
+    {
+      title: "New Year Prayer & Fasting",
+      date: "January 1, 2026",
+      time: "6:00 AM - 6:00 PM",
+      location: "Church Building",
+      description: "Begin the new year with prayer and fasting as we seek God's direction and blessing.",
+      type: "Prayer"
     }
   ];
 
   const getTypeColor = (type) => {
     const colors = {
-      Worship: 'bg-sky-100 text-sky-800',
+      Worship: 'bg-green-100 text-green-800',
       Prayer: 'bg-purple-100 text-purple-800',
-      Fellowship: 'bg-green-100 text-green-800',
+      Fellowship: 'bg-sky-100 text-sky-800',
       Study: 'bg-yellow-100 text-yellow-800'
     };
     return colors[type] || 'bg-gray-100 text-gray-800';
@@ -85,15 +85,15 @@ export default function Events() {
 
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center text-gray-600">
-                    <Calendar className="w-5 h-5 mr-3 text-emerald-600" />
+                    <Calendar className="w-5 h-5 mr-3 text-sky-600" />
                     {event.date}
                   </div>
                   <div className="flex items-center text-gray-600">
-                    <Clock className="w-5 h-5 mr-3 text-emerald-600" />
+                    <Clock className="w-5 h-5 mr-3 text-sky-600" />
                     {event.time}
                   </div>
                   <div className="flex items-center text-gray-600">
-                    <MapPin className="w-5 h-5 mr-3 text-emerald-600" />
+                    <MapPin className="w-5 h-5 mr-3 text-sky-600" />
                     {event.location}
                   </div>
                 </div>
@@ -102,7 +102,7 @@ export default function Events() {
                   {event.description}
                 </p>
 
-                <button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors">
+                <button className="w-full bg-sky-600 hover:bg-sky-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors">
                   Learn More
                 </button>
               </div>

@@ -42,7 +42,7 @@ export default function Contact() {
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Find Us</h2>
             <p className="text-lg text-gray-600">
-              Located in the heart of Busia Town, Busia
+              Located in the heart of Funyula Town, Busia
             </p>
           </div>
 

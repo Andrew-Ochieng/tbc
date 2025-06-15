@@ -11,9 +11,8 @@ export default function ContactDetails() {
                 <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Location</h3>
                 <p className="text-gray-600">
-                    Busia Town<br />
-                    Busia<br />
-                    (Exact address to be provided)
+                    Funyula Town, Busia<br />
+                    300m from Nassi Hospital
                 </p>
                 </div>
             </div>

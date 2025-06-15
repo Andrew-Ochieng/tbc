@@ -50,7 +50,7 @@ export default function StatementOfFaith() {
             <div className="w-20 h-20 bg-sky-600 rounded-full flex items-center justify-center mx-auto mb-6">
               <BookOpen className="w-10 h-10 text-white" />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Statement of Faith</h1>
+            <span className="text-4xl md:text-5xl font-bold mb-6">Statement of Faith</span>
           </>
         }
         subtitle="Our foundational beliefs based on the authoritative Word of God"

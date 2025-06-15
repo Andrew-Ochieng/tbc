@@ -1,5 +1,6 @@
-import { Link } from 'lucide-react'
+
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function HomeSermons() {
   return (
@@ -26,7 +27,7 @@ export default function HomeSermons() {
                   The Grace of God in Salvation
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Pastor John Kimani • Romans 3:21-26 • December 10, 2024
+                  Pastor Simon Ochieng • Romans 3:21-26 • December 10, 2024
                 </p>
                 <p className="text-gray-700 mb-6">
                   In this powerful message, we explore the magnificent grace of God revealed in

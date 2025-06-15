@@ -1,8 +1,8 @@
-import { Award, Book, DollarSign, HelpCircle, Users, BookOpen, GraduationCap, User, CalendarCheck } from "lucide-react";
-import {  MessageCircle, ClipboardList, BellRing, NotebookPen, Home, Calendar, Mail, HeartHandshake, BookText, UserRoundCog } from "lucide-react";
+import { Book, Users, BookOpen, Home, Calendar, Mail, HeartHandshake, BookText, UserRoundCog } from "lucide-react";
 import heroImg from "../assets/hero.jpg";
 import heroImg3 from "../assets/hero3.jpg";
 import heroImg2 from "../assets/hero2.jpg";
+import blogImage from "../assets/scriptures.jpg";
 
 
 const heroCarouselData = [
@@ -13,7 +13,7 @@ const heroCarouselData = [
     description: "Proclaiming Christ crucified and the whole counsel of God in Busia.",
     bgImage: heroImg,
     stats: {
-      main: "Est. 2015",
+      main: "Est. 2011",
       secondary: "Faithfully serving our community"
     }
   },
@@ -35,7 +35,7 @@ const heroCarouselData = [
     description: "Nurturing faith in all ages through Sunday School, youth programs, and discipleship.",
     bgImage: heroImg3,
     stats: {
-      main: "100+",
+      main: "20+",
       secondary: "families worshiping together"
     }
   },
@@ -46,7 +46,7 @@ const heroCarouselData = [
     description: "Sharing Christ's love through evangelism, mercy ministry, and biblical counseling.",
     bgImage: heroImg2,
     stats: {
-      main: "5+",
+      main: "4+",
       secondary: "community programs annually"
     }
   }
@@ -111,5 +111,48 @@ const navList = [
 ];
 
 
+const recentArticles = [
+  {
+    id: 1,
+    title: "The Sovereignty of God in Salvation",
+    excerpt: "Exploring how God's sovereign grace works in the salvation of sinners according to Ephesians 1.",
+    date: "May 15, 2023",
+    author: "Pastor Simon",
+    category: "Theology",
+    readTime: "5 min read",
+    image: {blogImage}
+  },
+  {
+    id: 2,
+    title: "Biblical Church Membership",
+    excerpt: "Why formal church membership matters and how it reflects New Testament practice.",
+    date: "April 28, 2023",
+    author: "Elder Mark",
+    category: "Church Life",
+    readTime: "7 min read",
+    image: {blogImage}
+  },
+  {
+    id: 3,
+    title: "Family Worship in the Christian Home",
+    excerpt: "Practical guidance for establishing regular family worship times in your household.",
+    date: "April 10, 2023",
+    author: "Deacon Samuel",
+    category: "Family",
+    readTime: "4 min read",
+    image: {blogImage}
+  },
+  {
+    id: 4,
+    title: "The Reformation and Its Legacy",
+    excerpt: "How the Protestant Reformation continues to shape our faith and practice today.",
+    date: "March 22, 2023",
+    author: "Pastor Simon",
+    category: "History",
+    readTime: "8 min read",
+    image: {blogImage}
+  }
+];
 
-export { heroCarouselData, faqs, navList };
+
+export { heroCarouselData, faqs, navList, recentArticles };

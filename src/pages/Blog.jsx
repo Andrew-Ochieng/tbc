@@ -1,31 +1,11 @@
 import { Calendar, User, ArrowRight } from 'lucide-react';
 import headerImage from '../assets/scriptures.jpg';
 import PageHeader from '../components/PageHeader';
+import { recentArticles } from '../data/homeData';
+import { Link } from 'react-router-dom';
 
 export default function Blog() {
-  const posts = [
-    {
-      title: "The Importance of Expository Preaching",
-      author: "Pastor Simon Ochieng",
-      date: "December 8, 2024",
-      excerpt: "Why faithful, verse-by-verse exposition of Scripture is essential for the health and growth of the local church.",
-      readTime: "5 min read"
-    },
-    {
-      title: "Reformed Theology in African Context",
-      author: "Pastor Simon Ochieng",
-      date: "November 28, 2024",
-      excerpt: "How the truths of Reformed theology speak powerfully to the African church and address cultural challenges.",
-      readTime: "7 min read"
-    },
-    {
-      title: "The Local Church and Community Mission",
-      author: "Pastor Simon Ochieng",
-      date: "November 15, 2024",
-      excerpt: "Understanding our responsibility to serve and minister to our neighbors in Busia.",
-      readTime: "6 min read"
-    }
-  ];
+
 
   return (
     <div>
@@ -44,9 +24,9 @@ export default function Blog() {
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-12">
-            {posts.map((post, index) => (
+            {recentArticles.map((post, index) => (
               <article key={index} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 hover:text-teal-600 transition-colors">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 hover:text-sky-600 transition-colors">
                   <a href="#" className="block">
                     {post.title}
                   </a>
@@ -70,13 +50,13 @@ export default function Blog() {
                   {post.excerpt}
                 </p>
 
-                <a
-                  href="#"
-                  className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold transition-colors"
+                <Link
+                  to={`/blog/${post.id}`}
+                  className="inline-flex items-center text-sky-600 hover:text-sky-700 font-semibold transition-colors"
                 >
                   Read More
                   <ArrowRight className="w-4 h-4 ml-1" />
-                </a>
+                </Link>
               </article>
             ))}
           </div>

@@ -1,41 +1,47 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import About from './pages/About';
-import StatementOfFaith from './pages/StatementOfFaith';
-import OurBeliefs from './pages/OurBeliefs';
-import Literature from './pages/Literature';
-import OurLeaders from './pages/OurLeaders';
-import Sermons from './pages/Sermons';
-import Blog from './pages/Blog';
-import Events from './pages/Events';
-import Contact from './pages/Contact';
-import Give from './pages/Give';
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { useEffect, useState } from 'react';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './router';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import Loader from './components/ui/Loader';
+import { Toaster } from "react-hot-toast";
+import { toastConfig } from "./utils/toasterConfig";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []); 
+
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        retry: 1,
+        refetchOnWindowFocus: false,
+      },
+    },
+  });
+
   return (
-    <Router>
-      <div className="min-h-screen flex flex-col">
-        <Navbar />
-        <main className="flex-1">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/about/statement-of-faith" element={<StatementOfFaith />} />
-            <Route path="/about/our-beliefs" element={<OurBeliefs />} />
-            <Route path="/about/literature" element={<Literature />} />
-            <Route path="/about/our-leaders" element={<OurLeaders />} />
-            <Route path="/sermons" element={<Sermons />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/events" element={<Events />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/give" element={<Give />} />
-          </Routes>
-        </main>
-        <Footer />
+    <QueryClientProvider client={queryClient}>
+      <Toaster {...toastConfig} />
+      <div className="font-nunito" >
+        <Loader loading={loading} />
+        <RouterProvider router={router} />
       </div>
-    </Router>
+    </QueryClientProvider>
   );
 }
 
