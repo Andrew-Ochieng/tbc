@@ -1,4 +1,6 @@
 import { BookOpen, Cross } from 'lucide-react';
+import PageHeader from '../components/PageHeader';
+import headerImage from '../assets/scriptures.jpg';
 
 export default function StatementOfFaith() {
   const articles = [
@@ -42,20 +44,24 @@ export default function StatementOfFaith() {
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+      <PageHeader
+        title={
+          <>
+            <div className="w-20 h-20 bg-sky-600 rounded-full flex items-center justify-center mx-auto mb-6">
               <BookOpen className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Statement of Faith</h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Our foundational beliefs based on the authoritative Word of God
-            </p>
-          </div>
-        </div>
-      </section>
+          </>
+        }
+        subtitle="Our foundational beliefs based on the authoritative Word of God"
+        bgImage={headerImage}
+        overlayColor="rgba(0, 0, 0, 0.6)"
+        gradientFrom="from-sky-900"
+        gradientTo="to-sky-800"
+        height="lg"
+        textColor="text-white"
+        subtitleColor="text-sky-100"
+      />
 
       {/* Introduction */}
       <section className="py-16">
@@ -71,14 +77,14 @@ export default function StatementOfFaith() {
             </p>
           </div>
 
-          <div className="bg-blue-50 border-l-4 border-blue-600 p-6 mb-12">
+          <div className="bg-sky-50 border-l-4 border-sky-600 p-6 mb-12">
             <div className="flex items-start">
-              <Cross className="w-6 h-6 text-blue-600 mt-1 mr-3 flex-shrink-0" />
+              <Cross className="w-6 h-6 text-sky-600 mt-1 mr-3 flex-shrink-0" />
               <div>
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                <h3 className="text-lg font-semibold text-sky-900 mb-2">
                   The Five Solas
                 </h3>
-                <p className="text-blue-800">
+                <p className="text-sky-800">
                   We affirm the five foundational principles of the Reformation:
                   Scripture Alone, Grace Alone, Faith Alone, Christ Alone, and Glory to God Alone.
                 </p>
@@ -104,7 +110,7 @@ export default function StatementOfFaith() {
             {articles.map((article, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg p-8">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                  <span className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">
+                  <span className="w-8 h-8 bg-sky-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">
                     {index + 1}
                   </span>
                   {article.title}
@@ -157,25 +163,25 @@ export default function StatementOfFaith() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-blue-900 text-white">
+      <section className="py-16 bg-sky-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Questions About Our Beliefs?
           </h2>
-          <p className="text-xl mb-8 text-blue-100">
+          <p className="text-xl mb-8 text-sky-100">
             We welcome discussion about our doctrinal positions and would be happy
             to answer any questions you may have.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
-              className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
+              className="bg-white text-sky-900 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Contact Us
             </a>
             <a
               href="/about/our-beliefs"
-              className="border border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors"
+              className="border border-white text-white hover:bg-white hover:text-sky-900 px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Our Beliefs
             </a>

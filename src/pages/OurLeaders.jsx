@@ -1,16 +1,20 @@
+import headerImage from '../assets/scriptures.jpg';
+import PageHeader from '../components/PageHeader';
+
 export default function OurLeaders() {
   return (
     <div>
-      <section className="bg-gradient-to-r from-orange-900 to-orange-800 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Leaders</h1>
-            <p className="text-xl md:text-2xl text-orange-100 max-w-3xl mx-auto">
-              Meet our pastoral staff and church leadership team
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHeader
+        title="Our Leaders"
+        subtitle="Meet our pastoral staff and church leadership team"
+        bgImage={headerImage}
+        overlayColor="rgba(0, 0, 0, 0.6)"
+        gradientFrom="from-sky-900"
+        gradientTo="to-sky-800"
+        height="lg"
+        textColor="text-white"
+        subtitleColor="text-sky-100"
+      />
 
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

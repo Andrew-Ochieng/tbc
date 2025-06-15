@@ -35,10 +35,10 @@ export default function About() {
 
   const getColorClasses = (color) => {
     const colors = {
-      blue: 'bg-blue-100 text-blue-600 hover:bg-blue-200',
+      blue: 'bg-sky-100 text-sky-600 hover:bg-sky-200',
       green: 'bg-green-100 text-green-600 hover:bg-green-200',
       purple: 'bg-purple-100 text-purple-600 hover:bg-purple-200',
-      orange: 'bg-orange-100 text-orange-600 hover:bg-orange-200'
+      orange: 'bg-yellow-100 text-yellow-600 hover:bg-yellow-200'
     };
     return colors[color] || colors.blue;
   };
@@ -46,11 +46,11 @@ export default function About() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-16">
+      <section className="bg-gradient-to-r from-sky-900 to-sky-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">About Us</h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-sky-100 max-w-3xl mx-auto">
               Learn more about our church, our beliefs, and our commitment to the Reformed faith
             </p>
           </div>
@@ -66,7 +66,7 @@ export default function About() {
                 Who We Are
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Reformed Baptist Church is a Bible-believing congregation in Western Kenya committed
+                Reformed Baptist Church is a Bible-believing congregation in Busia committed
                 to the historic Reformed faith. We hold to the authority of Scripture, the sovereignty
                 of God, and the Gospel of Jesus Christ as the power of God for salvation.
               </p>
@@ -76,7 +76,7 @@ export default function About() {
                 Christian fellowship.
               </p>
               <p className="text-lg text-gray-600">
-                Our desire is to see the Gospel transform lives throughout Western Kenya and to
+                Our desire is to see the Gospel transform lives throughout Busia and to
                 raise up faithful disciples who will carry the message of Christ to the ends of the earth.
               </p>
             </div>
@@ -102,7 +102,7 @@ export default function About() {
               <p className="text-gray-600">
                 To glorify God by making disciples of Jesus Christ through the faithful preaching
                 of God's Word, biblical worship, genuine fellowship, and compassionate service to
-                our community in Western Kenya.
+                our community in Busia.
               </p>
             </div>
 
@@ -110,7 +110,7 @@ export default function About() {
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Vision</h3>
               <p className="text-gray-600">
                 To see the Gospel of Jesus Christ transform lives, families, and communities
-                throughout Western Kenya and beyond, raising up faithful disciples who love God,
+                throughout Busia and beyond, raising up faithful disciples who love God,
                 love His Word, and love their neighbors.
               </p>
             </div>
@@ -156,17 +156,17 @@ export default function About() {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-16 bg-blue-900 text-white">
+      <section className="py-16 bg-sky-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Questions About Our Church?
           </h2>
-          <p className="text-xl mb-8 text-blue-100">
+          <p className="text-xl mb-8 text-sky-100">
             We'd love to hear from you and answer any questions you may have
           </p>
           <Link
             to="/contact"
-            className="inline-block bg-white text-blue-900 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
+            className="inline-block bg-white text-sky-900 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
           >
             Contact Us
           </Link>

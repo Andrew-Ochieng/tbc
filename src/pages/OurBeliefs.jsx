@@ -1,4 +1,6 @@
 import { Heart, Star, Shield, Crown } from 'lucide-react';
+import PageHeader from '../components/PageHeader';
+import headerImage from '../assets/scriptures.jpg';
 
 export default function OurBeliefs() {
   const beliefs = [
@@ -30,17 +32,17 @@ export default function OurBeliefs() {
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-900 to-green-800 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Beliefs</h1>
-            <p className="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto">
-              Core theological convictions that shape our ministry and worship
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHeader
+        title="Our Beliefs"
+        subtitle="Core theological convictions that shape our ministry and worship"
+        bgImage={headerImage}
+        overlayColor="rgba(0, 0, 0, 0.6)"
+        gradientFrom="from-green-800"
+        gradientTo="to-green-900"
+        height="lg"
+        textColor="text-white"
+        subtitleColor="text-green-100"
+      />
 
       {/* The Five Solas */}
       <section className="py-16">

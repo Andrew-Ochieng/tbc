@@ -1,4 +1,6 @@
 import { Heart, DollarSign, CreditCard, Smartphone, Building } from 'lucide-react';
+import PageHeader from '../components/PageHeader';
+import headerImage from '../assets/scriptures.jpg';
 
 export default function Give() {
   const givingOptions = [
@@ -30,19 +32,24 @@ export default function Give() {
 
   return (
     <div>
-      <section className="bg-gradient-to-r from-amber-900 to-amber-800 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="w-20 h-20 bg-amber-600 rounded-full flex items-center justify-center mx-auto mb-6">
+      <PageHeader
+        title={
+          <>
+            <div className="w-20 h-20 bg-yellow-600 rounded-full flex items-center justify-center mx-auto mb-6">
               <Heart className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Give</h1>
-            <p className="text-xl md:text-2xl text-amber-100 max-w-3xl mx-auto">
-              Support the ministry and mission of Reformed Baptist Church
-            </p>
-          </div>
-        </div>
-      </section>
+          </>
+        }
+        subtitle="Support the ministry and mission of Reformed Baptist Church"
+        bgImage={headerImage}
+        overlayColor="rgba(0, 0, 0, 0.6)"
+        gradientFrom="from-sky-900"
+        gradientTo="to-sky-800"
+        height="lg"
+        textColor="text-white"
+        subtitleColor="text-sky-100"
+      />
 
       {/* Biblical Foundation */}
       <section className="py-16">
@@ -55,18 +62,18 @@ export default function Give() {
             </p>
           </div>
 
-          <div className="bg-blue-50 border-l-4 border-blue-600 p-8 mb-12">
-            <blockquote className="text-lg text-blue-900 italic mb-4">
+          <div className="bg-sky-50 border-l-4 border-sky-600 p-8 mb-12">
+            <blockquote className="text-lg text-sky-900 italic mb-4">
               "Each one must give as he has decided in his heart, not reluctantly or under
               compulsion, for God loves a cheerful giver."
             </blockquote>
-            <cite className="text-blue-800 font-semibold">— 2 Corinthians 9:7</cite>
+            <cite className="text-sky-800 font-semibold">— 2 Corinthians 9:7</cite>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Heart className="w-8 h-8 text-blue-600" />
+              <div className="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Heart className="w-8 h-8 text-sky-600" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Worship</h3>
               <p className="text-gray-600">
@@ -113,8 +120,8 @@ export default function Give() {
               return (
                 <div key={index} className="bg-white p-8 rounded-lg shadow-lg">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <IconComponent className="w-6 h-6 text-amber-600" />
+                    <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <IconComponent className="w-6 h-6 text-yellow-600" />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-gray-900 mb-2">
@@ -147,7 +154,7 @@ export default function Give() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">40%</div>
+              <div className="text-3xl font-bold text-sky-600 mb-2">40%</div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Ministry Operations</h3>
               <p className="text-gray-600 text-sm">
                 Daily operations, utilities, and ministry supplies
@@ -171,7 +178,7 @@ export default function Give() {
             </div>
 
             <div className="text-center">
-              <div className="text-3xl font-bold text-orange-600 mb-2">15%</div>
+              <div className="text-3xl font-bold text-yellow-600 mb-2">15%</div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Pastoral Support</h3>
               <p className="text-gray-600 text-sm">
                 Supporting pastoral ministry and leadership
@@ -182,24 +189,24 @@ export default function Give() {
       </section>
 
       {/* Contact for Questions */}
-      <section className="py-16 bg-amber-900 text-white">
+      <section className="py-16 bg-yellow-800 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Questions About Giving?
           </h2>
-          <p className="text-xl mb-8 text-amber-100">
+          <p className="text-xl mb-8 text-yellow-100">
             We're here to help with any questions about donations or stewardship
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
-              className="bg-white text-amber-900 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
+              className="bg-white text-yellow-800 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Contact Us
             </a>
             <a
               href="mailto:info@reformedbaptistkenya.org"
-              className="border border-white text-white hover:bg-white hover:text-amber-900 px-8 py-3 rounded-lg font-semibold transition-colors"
+              className="border border-white text-white hover:bg-white hover:text-yellow-800 px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Email Questions
             </a>

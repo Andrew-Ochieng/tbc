@@ -9,17 +9,17 @@ export default function Footer() {
           {/* Church Info */}
           <div className="col-span-1 lg:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-xl">RBC</span>
+              <div className="w-10 h-10 bg-sky-600 rounded-full flex items-center justify-center">
+                <span className="text-white font-bold text-xl">TBC</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold">Reformed Baptist Church</h3>
-                <p className="text-gray-400">Western Kenya</p>
+                <h3 className="text-xl font-bold">Trinity Baptist Church</h3>
+                <p className="text-gray-400">Funyula, Busia - Kenya</p>
               </div>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
               A Bible-believing church committed to the Reformed faith and the Great Commission.
-              We exist to glorify God through worship, discipleship, and evangelism in Western Kenya.
+              We exist to glorify God through worship, discipleship, and evangelism in Busia.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -73,8 +73,8 @@ export default function Footer() {
               <div className="flex items-start space-x-2">
                 <MapPin className="w-5 h-5 text-gray-400 mt-0.5 flex-shrink-0" />
                 <div>
-                  <p className="text-gray-300 text-sm">Kakamega Town</p>
-                  <p className="text-gray-300 text-sm">Western Kenya</p>
+                  <p className="text-gray-300 text-sm">Busia Town</p>
+                  <p className="text-gray-300 text-sm">Busia</p>
                 </div>
               </div>
               <div className="flex items-center space-x-2">
@@ -83,7 +83,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-5 h-5 text-gray-400" />
-                <p className="text-gray-300 text-sm">info@reformedbaptistkenya.org</p>
+                <p className="text-gray-300 text-sm">tbcfunyula@gmail.com</p>
               </div>
               <div className="flex items-start space-x-2">
                 <Clock className="w-5 h-5 text-gray-400 mt-0.5" />
@@ -98,7 +98,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Reformed Baptist Church, Western Kenya. All rights reserved.
+            © {new Date().getFullYear()} Trinity Baptist Church, Funyula. All rights reserved.
           </p>
         </div>
       </div>

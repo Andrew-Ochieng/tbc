@@ -1,4 +1,6 @@
 import { Calendar, Clock, MapPin, Users } from 'lucide-react';
+import PageHeader from '../components/PageHeader';
+import headerImage from '../assets/scriptures.jpg';
 
 export default function Events() {
   const events = [
@@ -38,26 +40,27 @@ export default function Events() {
 
   const getTypeColor = (type) => {
     const colors = {
-      Worship: 'bg-blue-100 text-blue-800',
+      Worship: 'bg-sky-100 text-sky-800',
       Prayer: 'bg-purple-100 text-purple-800',
       Fellowship: 'bg-green-100 text-green-800',
-      Study: 'bg-orange-100 text-orange-800'
+      Study: 'bg-yellow-100 text-yellow-800'
     };
     return colors[type] || 'bg-gray-100 text-gray-800';
   };
 
   return (
     <div>
-      <section className="bg-gradient-to-r from-emerald-900 to-emerald-800 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Events</h1>
-            <p className="text-xl md:text-2xl text-emerald-100 max-w-3xl mx-auto">
-              Upcoming events and activities at our church
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHeader
+        title="Events"
+        subtitle="Upcoming events and activities at our church"
+        bgImage={headerImage}
+        overlayColor="rgba(0, 0, 0, 0.6)"
+        gradientFrom="from-sky-900"
+        gradientTo="to-sky-800"
+        height="lg"
+        textColor="text-white"
+        subtitleColor="text-sky-100"
+      />
 
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -120,12 +123,12 @@ export default function Events() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-lg text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-blue-600" />
+              <div className="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-sky-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Sunday Worship</h3>
               <p className="text-gray-600 mb-4">Main worship service with preaching and fellowship</p>
-              <p className="text-2xl font-bold text-blue-600">9:00 AM</p>
+              <p className="text-2xl font-bold text-sky-600">9:00 AM</p>
             </div>
 
             <div className="bg-white p-8 rounded-lg shadow-lg text-center">
