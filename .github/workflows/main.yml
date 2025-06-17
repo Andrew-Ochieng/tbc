@@ -1,0 +1,47 @@
+name: Deploy to cPanel
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the code from the repository
+      - name: Checkout Code 🚚
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js environment
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.0.0'
+
+      # Step 3: Install project dependencies
+      - name: Install Dependencies 📦
+        run: npm install
+
+      # Step 4: Build the project (adjust command if necessary)
+      - name: Build Vite App 🏗️
+        env:
+          VITE_API_BASE_URL: ${{ secrets.VITE_API_BASE_URL }}  # Ensure your secret is prefixed with VITE_
+        run: npm run build
+
+      # Step 5: Upload build files to cPanel using FTP
+      - name: Upload to cPanel 📂
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: ${{ secrets.FTP_PORT }}  # Optional, remove if using default port 21
+          local-dir: dist/  # Vite's default build output directory
+          server-dir: /  # Adjust to your server directory
+          exclude: |
+            **/.git**
+            **/.git*/**
+            **/node_modules/**
+            **/.**
