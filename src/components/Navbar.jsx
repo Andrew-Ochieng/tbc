@@ -36,8 +36,7 @@ const Navbar = () => {
         }
       }
     } else {
-      // reload page
-      window.location.href(href)
+      window.location.href = href; 
     }
   };
 
