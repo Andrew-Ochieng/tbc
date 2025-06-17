@@ -22,7 +22,7 @@ jobs:
 
       # Step 3: Install project dependencies
       - name: Install Dependencies 📦
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       # Step 4: Build the project (adjust command if necessary)
       - name: Build Vite App 🏗️
