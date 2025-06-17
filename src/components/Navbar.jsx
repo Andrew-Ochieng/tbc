@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { Menu, X,  ChevronDown, ChevronUp,} from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { mobileMenuVariants, navItemVariants } from '../utils/framerVariants';
@@ -36,8 +36,8 @@ const Navbar = () => {
         }
       }
     } else {
-      // reload page
-      window.location.replace(href)
+      // navigate(href);
+      window.location.href = href;
     }
   };
 
@@ -64,7 +64,7 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-8">
             {navList.map((item) => (
               <div key={item.name} className="relative group">
-                <motion.a
+                <Link
                   href={item.href}
                   onClick={(e) => item.submenu ? toggleSubmenu(item.name) : handleAnchorClick(e, item.href)}
                   className={`flex items-center space-x-1 hover:text-sky-800 transition-colors duration-300 ${
@@ -80,7 +80,7 @@ const Navbar = () => {
                       {openSubmenu === item.name ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
                     </span>
                   )}
-                </motion.a>
+                </Link>
 
                 {item.submenu && (
                   <AnimatePresence>
@@ -113,14 +113,14 @@ const Navbar = () => {
 
           {/* Mobile Navigation Toggle */}
           <div className="md:hidden">
-            <motion.a
+            <Link
               onClick={() => setIsOpen(!isOpen)}
               className={`focus:outline-none transition-colors ${isScrolled ? 'text-sky-800' : 'text-white'}`}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </motion.a>
+            </Link>
           </div>
         </div>
 
@@ -137,7 +137,7 @@ const Navbar = () => {
               <motion.div className="flex flex-col space-y-4">
                 {navList.map((item, i) => (
                   <div key={item.name}>
-                    <motion.a
+                    <Link
                       href={item.href}
                       onClick={(e) => item.submenu ? toggleSubmenu(item.name) : handleAnchorClick(e, item.href)}
                       className="flex items-center justify-between space-x-2 text-gray-700 hover:text-sky-800 transition-colors duration-300 py-2"
@@ -156,7 +156,7 @@ const Navbar = () => {
                           {openSubmenu === item.name ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
                         </span>
                       )}
-                    </motion.a>
+                    </Link>
 
                     {item.submenu && openSubmenu === item.name && (
                       <motion.div
@@ -167,7 +167,7 @@ const Navbar = () => {
                         transition={{ duration: 0.2 }}
                       >
                         {item.submenu.map((subItem, j) => (
-                          <motion.a
+                          <Link
                             key={subItem.name}
                             href={subItem.href}
                             onClick={(e) => handleAnchorClick(e, subItem.href)}
@@ -178,7 +178,7 @@ const Navbar = () => {
                           >
                             {subItem.icon}
                             <span>{subItem.name}</span>
-                          </motion.a>
+                          </Link>
                         ))}
                       </motion.div>
                     )}
