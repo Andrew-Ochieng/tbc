@@ -1,34 +1,10 @@
 import { Heart, DollarSign, CreditCard, Smartphone, Building } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import headerImage from '../assets/scriptures.jpg';
+import GivingSection from '../components/give/GivingSection';
 
 export default function Give() {
-  const givingOptions = [
-    {
-      icon: Smartphone,
-      title: "Mobile Money",
-      description: "Give via M-Pesa or other mobile money services",
-      details: "Send to: Trinity Baptist Church\nPaybill: (To be provided)\nAccount: Your name"
-    },
-    {
-      icon: Building,
-      title: "Bank Transfer",
-      description: "Direct bank transfer or deposit",
-      details: "Bank: (To be provided)\nAccount Name: Trinity Baptist Church\nAccount Number: (To be provided)"
-    },
-    {
-      icon: CreditCard,
-      title: "Online Giving",
-      description: "Secure online donations via card",
-      details: "Coming soon - secure online giving platform"
-    },
-    {
-      icon: DollarSign,
-      title: "Cash/Check",
-      description: "Give in person during service",
-      details: "Place your offering in the collection during Sunday service"
-    }
-  ];
+
 
   return (
     <div>
@@ -92,8 +68,8 @@ export default function Give() {
             </div>
 
             <div className="text-center" data-aos="fade-up" data-aos-delay="300">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <DollarSign className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <DollarSign className="w-8 h-8 text-yellow-600" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Stewardship</h3>
               <p className="text-gray-600">
@@ -104,43 +80,7 @@ export default function Give() {
         </div>
       </section>
 
-      {/* Giving Options */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12" data-aos="fade-up" data-aos-delay="100">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Ways to Give</h2>
-            <p className="text-lg text-gray-600">
-              Choose the method that works best for you
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {givingOptions.map((option, index) => {
-              const IconComponent = option.icon;
-              return (
-                <div key={index} className="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <IconComponent className="w-6 h-6 text-green-600" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">
-                        {option.title}
-                      </h3>
-                      <p className="text-gray-600 mb-4">
-                        {option.description}
-                      </p>
-                      <div className="text-sm text-gray-700 bg-gray-50 p-4 rounded whitespace-pre-line">
-                        {option.details}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      <GivingSection />
 
 
       <section className="py-16 bg-green-800 text-white">
