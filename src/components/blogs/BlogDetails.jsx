@@ -1,7 +1,7 @@
 import React from 'react';
 import headerImage from '../../assets/scriptures.jpg';
 import PageHeader from '../PageHeader';
-import { recentArticles } from '../../data/homeData';
+import { recentArticles } from '../../data/articlesData';
 import { useParams } from 'react-router-dom';
 import { Bookmark, Clock, User, CalendarDays, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';

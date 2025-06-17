@@ -8,13 +8,13 @@ export default function Give() {
       icon: Smartphone,
       title: "Mobile Money",
       description: "Give via M-Pesa or other mobile money services",
-      details: "Send to: Reformed Baptist Church\nPaybill: (To be provided)\nAccount: Your name"
+      details: "Send to: Trinity Baptist Church\nPaybill: (To be provided)\nAccount: Your name"
     },
     {
       icon: Building,
       title: "Bank Transfer",
       description: "Direct bank transfer or deposit",
-      details: "Bank: (To be provided)\nAccount Name: Reformed Baptist Church\nAccount Number: (To be provided)"
+      details: "Bank: (To be provided)\nAccount Name: Trinity Baptist Church\nAccount Number: (To be provided)"
     },
     {
       icon: CreditCard,
@@ -41,7 +41,7 @@ export default function Give() {
             <span className="text-4xl md:text-5xl font-bold mb-6">Give</span>
           </>
         )}
-        subtitle="Support the ministry and mission of Reformed Baptist Church"
+        subtitle="Support the ministry and mission of Trinity Baptist Church"
         bgImage={headerImage}
         overlayColor="rgba(0, 0, 0, 0.6)"
         gradientFrom="from-sky-900"
@@ -51,10 +51,10 @@ export default function Give() {
         subtitleColor="text-sky-100"
       />
 
-      {/* Biblical Foundation */}
+
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12" data-aos="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Why We Give</h2>
             <p className="text-lg text-gray-600 mb-8">
               Giving is an act of worship and obedience to God, expressing our gratitude
@@ -62,8 +62,8 @@ export default function Give() {
             </p>
           </div>
 
-          <div className="bg-sky-50 border-l-4 border-sky-600 p-8 mb-12">
-            <blockquote className="text-lg text-sky-900 italic mb-4">
+          <div className="bg-sky-50 border-l-4 border-sky-600 md:p-8 p-4 mb-12" data-aos="fade-up" data-aos-delay="100">
+            <blockquote className="md:text-lg text-sky-900 italic mb-4">
               "Each one must give as he has decided in his heart, not reluctantly or under
               compulsion, for God loves a cheerful giver."
             </blockquote>
@@ -71,7 +71,7 @@ export default function Give() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
+            <div className="text-center" data-aos="fade-up" data-aos-delay="100">
               <div className="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Heart className="w-8 h-8 text-sky-600" />
               </div>
@@ -81,7 +81,7 @@ export default function Give() {
               </p>
             </div>
 
-            <div className="text-center">
+            <div className="text-center" data-aos="fade-up" data-aos-delay="200">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Building className="w-8 h-8 text-green-600" />
               </div>
@@ -91,7 +91,7 @@ export default function Give() {
               </p>
             </div>
 
-            <div className="text-center">
+            <div className="text-center" data-aos="fade-up" data-aos-delay="300">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <DollarSign className="w-8 h-8 text-purple-600" />
               </div>
@@ -107,7 +107,7 @@ export default function Give() {
       {/* Giving Options */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12" data-aos="fade-up" data-aos-delay="100">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Ways to Give</h2>
             <p className="text-lg text-gray-600">
               Choose the method that works best for you
@@ -118,7 +118,7 @@ export default function Give() {
             {givingOptions.map((option, index) => {
               const IconComponent = option.icon;
               return (
-                <div key={index} className="bg-white p-8 rounded-lg shadow-lg">
+                <div key={index} className="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
                       <IconComponent className="w-6 h-6 text-green-600" />
@@ -143,7 +143,6 @@ export default function Give() {
       </section>
 
 
-      {/* Contact for Questions */}
       <section className="py-16 bg-green-800 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -160,7 +159,7 @@ export default function Give() {
               Contact Us
             </a>
             <a
-              href="mailto:info@reformedbaptistkenya.org"
+              href="mailto:tbcfunyula@gmail.com"
               className="border border-white text-white hover:bg-white hover:text-green-800 px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Email Questions

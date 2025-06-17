@@ -1,7 +1,7 @@
 import { Calendar, User, ArrowRight } from 'lucide-react';
 import headerImage from '../assets/scriptures.jpg';
 import PageHeader from '../components/PageHeader';
-import { recentArticles } from '../data/homeData';
+import { recentArticles } from '../data/articlesData';
 import { Link } from 'react-router-dom';
 
 export default function Blog() {
@@ -25,7 +25,7 @@ export default function Blog() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-12">
             {recentArticles.map((post, index) => (
-              <article key={index} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <article key={index} className="bg-white rounded-lg shadow-lg md:p-8 p-4 hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="200">
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 hover:text-sky-600 transition-colors">
                   <a href="#" className="block">
                     {post.title}

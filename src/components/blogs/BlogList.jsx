@@ -1,8 +1,8 @@
 import React from 'react'
-import { recentArticles } from '../../data/homeData'
 import { Bookmark, Clock } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import headerImage from '../../assets/scriptures.jpg';
+import { recentArticles } from '../../data/articlesData';
 
 
 export default function BlogList() {
@@ -10,17 +10,22 @@ export default function BlogList() {
     <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" data-aos="fade-down" data-aos-delay="000">
               From Our Blog
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto" data-aos="fade-down" data-aos-delay="100">
               Recent articles on theology, church life, and Christian living
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {recentArticles.map((article) => (
-              <div key={article.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div 
+                key={article.id} 
+                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300" 
+                data-aos="fade-up" 
+                data-aos-delay={article.id * 100}
+              >
                 <div className="h-48 bg-gray-200 overflow-hidden">
                   <img 
                     src={article.image?.blogImage || headerImage} 

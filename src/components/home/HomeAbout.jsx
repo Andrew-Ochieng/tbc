@@ -8,7 +8,7 @@ export default function HomeAbout() {
     <section className="py-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
+                <div data-aos="fade-up" data-aos-delay="200">
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                     Our Mission & Vision
                   </h2>
@@ -47,7 +47,7 @@ export default function HomeAbout() {
                     Learn More About Us
                   </Link>
                 </div>
-                <div className="bg-gray-200 rounded-lg md:h-96 h-72 flex flex-col items-center justify-center relative overflow-hidden">
+                <div className="bg-gray-200 rounded-lg md:h-96 h-72 flex flex-col items-center justify-center relative overflow-hidden" data-aos="fade-up">
                     <div className="w-full h-full relative flex items-center justify-center">
                         <img 
                         src={aboutImg} 

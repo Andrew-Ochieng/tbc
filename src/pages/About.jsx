@@ -29,7 +29,7 @@ export default function About() {
         subtitleColor="text-sky-100"
       />
 
-      {/* Church Overview */}
+
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -38,7 +38,7 @@ export default function About() {
                 Who We Are
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Reformed Baptist Church is a Bible-believing congregation in Busia committed
+                Trinity Baptist Church is a Bible-believing congregation in Busia committed
                 to the historic Reformed faith. We hold to the authority of Scripture, the sovereignty
                 of God, and the Gospel of Jesus Christ as the power of God for salvation.
               </p>
@@ -59,7 +59,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Our Mission */}
+
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -90,7 +90,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* About Navigation */}
+
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -127,7 +127,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Contact CTA */}
+
       <section className="py-16 bg-sky-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">

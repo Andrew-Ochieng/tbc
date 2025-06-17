@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Menu, X, Book, Home, Users, BookOpen, BookText, UserRoundCog, Calendar, Mail, HeartHandshake, ChevronDown, ChevronUp, Cross, Church } from 'lucide-react';
+import { Menu, X,  ChevronDown, ChevronUp,} from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { mobileMenuVariants, navItemVariants } from '../utils/framerVariants';
 import { navList } from '../data/homeData';
@@ -36,7 +36,8 @@ const Navbar = () => {
         }
       }
     } else {
-      navigate(href);
+      // reload page
+      window.location.replace(href)
     }
   };
 
@@ -112,14 +113,14 @@ const Navbar = () => {
 
           {/* Mobile Navigation Toggle */}
           <div className="md:hidden">
-            <motion.button
+            <motion.a
               onClick={() => setIsOpen(!isOpen)}
               className={`focus:outline-none transition-colors ${isScrolled ? 'text-sky-800' : 'text-white'}`}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </motion.button>
+            </motion.a>
           </div>
         </div>
 

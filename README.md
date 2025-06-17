@@ -1,4 +1,4 @@
-# Reformed Baptist Church Website - Project Todos
+# Trinity Baptist Church Website - Project Todos
 
 ## Setup & Configuration
 - [x] Create React project with Vite and shadcn/ui

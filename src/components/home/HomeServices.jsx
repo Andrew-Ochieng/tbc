@@ -15,7 +15,6 @@ export default function HomeServices() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Sunday Service */}
             <div className="bg-white p-8 rounded-lg shadow-lg text-center">
               <div className="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Clock className="w-8 h-8 text-sky-600" />
@@ -25,7 +24,6 @@ export default function HomeServices() {
               <p className="text-2xl font-bold text-sky-600">9:00 AM</p>
             </div>
 
-            {/* Bible Study */}
             <div className="bg-white p-8 rounded-lg shadow-lg text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <BookOpen className="w-8 h-8 text-green-600" />
@@ -35,14 +33,13 @@ export default function HomeServices() {
               <p className="text-2xl font-bold text-green-600">Wed 7:00 PM</p>
             </div>
 
-            {/* Prayer Meeting */}
             <div className="bg-white p-8 rounded-lg shadow-lg text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-yellow-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Prayer Meeting</h3>
               <p className="text-gray-600 mb-4">Corporate prayer for our church and community</p>
-              <p className="text-2xl font-bold text-purple-600">Fri 6:30 PM</p>
+              <p className="text-2xl font-bold text-yellow-600">Fri 6:30 PM</p>
             </div>
           </div>
         </div>

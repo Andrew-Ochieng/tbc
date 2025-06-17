@@ -26,7 +26,7 @@ export default function Home() {
             Come and Worship With Us
           </h2>
           <p className="text-xl mb-8 text-sky-100">
-            You are always welcome at Reformed Baptist Church
+            You are always welcome at Trinity Baptist Church
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <div className="flex items-center justify-center space-x-2">
