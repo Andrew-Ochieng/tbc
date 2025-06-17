@@ -36,8 +36,7 @@ const Navbar = () => {
         }
       }
     } else {
-      // navigate(href);
-      window.location.href = href;
+      navigate(href);
     }
   };
 
